@@ -4,6 +4,7 @@ import Navbar from './UI/Navbar'
 import MobileMenu from './UI/MobileMenu'
 import LoadingScreenAnimation from './UI/LoadingScreenAnimation';
 import Home from './Sections/Home'
+import AnimationWaves from './UI/AnimationWaves';
 
 function App() {
   const [isLoading, setIsLoading] = React.useState(false);
@@ -16,6 +17,7 @@ function App() {
       <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
       <MobileMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
       <Home />
+      <AnimationWaves />
     </>
   )
 }

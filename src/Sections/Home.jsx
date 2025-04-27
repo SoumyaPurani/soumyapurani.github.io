@@ -1,5 +1,7 @@
 import React from 'react'
 import profileImg from '../assets/profileImg.jpg'
+import { FaFileDownload } from "react-icons/fa";
+import resume from '../assets/resume.pdf'
 
 function Home() {
   return (
@@ -12,6 +14,13 @@ function Home() {
             <p className="text-gray-300 text-lg mb-8 max-w-lg ax-auto">
                 I am a software engineer who loves to create secure, interactive and scalable software. I love to build solutions for difficult problems and maximize the performance of any software.
             </p>
+            <div className="flex justify-center items-center space-x-4">
+              <a className="bg-gradient-to-r flex flex-row from-teal-500 to-indigo-600 py-3 px-6 rounded hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] font-medium transition relative overflow-hidden" href="#contact">Contact Me</a>
+              <a className="bg-gradient-to-r flex flex-row from-teal-500 to-indigo-600 py-3 px-6 rounded hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] font-medium transition relative overflow-hidden" href={resume} download>
+                <p>Resume </p>
+                <span className="h-f ml-3 text-xl text-white"><FaFileDownload /></span>
+              </a>
+            </div>
         </div>
     </section>
   )
