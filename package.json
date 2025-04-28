@@ -1,5 +1,6 @@
 {
   "name": "soumyapurani.github.io",
+  "homepage": "https://soumyapurani.github.io//soumyapurani.github.io",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,7 +8,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gi-pages -d dist"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.4",
