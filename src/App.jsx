@@ -7,6 +7,7 @@ import Home from './Sections/Home'
 import AnimationWaves from './UI/AnimationWaves';
 import About from './Sections/About';
 import Projects from './Sections/Projects';
+import { Contact } from './Sections/Contact';
 
 function App() {
   const [isLoading, setIsLoading] = React.useState(false);
@@ -22,6 +23,7 @@ function App() {
       <AnimationWaves />
       <About />
       <Projects />
+      <Contact />
     </>
   )
 }
