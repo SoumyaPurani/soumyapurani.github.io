@@ -6,6 +6,7 @@ import LoadingScreenAnimation from './UI/LoadingScreenAnimation';
 import Home from './Sections/Home'
 import AnimationWaves from './UI/AnimationWaves';
 import About from './Sections/About';
+import Projects from './Sections/Projects';
 
 function App() {
   const [isLoading, setIsLoading] = React.useState(false);
@@ -20,6 +21,7 @@ function App() {
       <Home />
       <AnimationWaves />
       <About />
+      <Projects />
     </>
   )
 }

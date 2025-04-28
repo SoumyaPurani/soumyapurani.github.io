@@ -5,7 +5,7 @@ import resume from '../assets/resume.pdf'
 
 function Home() {
   return (
-    <section id="#home" className="min-h-screen flex flex-col items-center justify-center lg:flex-row-reverse gap-9 lg:gap-15">
+    <section id="home" className="min-h-screen flex flex-col items-center justify-center lg:flex-row-reverse gap-9 lg:gap-15">
         <div className="text-center z-10 px-4">
             <img className="w-[200px] border-0 mt-20 rounded-full shadow-lg shadw-gray-500/70 lg:m-0 lg:max-width-[250px] object-cover object-bottom hover:translate-y-1 transition-all" src={profileImg} alt="Profile Image" />
         </div>

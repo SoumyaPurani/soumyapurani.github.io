@@ -23,7 +23,7 @@ function About() {
         "Docker",
     ]
   return (
-    <section id="#about" className="min-h-screen font-mono flex items-center justify-center py-20">
+    <section id="about" className="min-h-screen font-mono flex items-center justify-center py-20">
         <div className="max-w-3xl mx-auto px-4 ">
             <h2 className="max-w-3xl text-4xl font-semibold mb-12 bg-gradient-to-r from-teal-500 to-indigo-600 bg-clip-text text-transparent text-center">About Me</h2>
             <div className="p-8 mb-6 rounded-xl border-white/10 border-2 hover:-translate-y-1 transition-all">
@@ -33,7 +33,7 @@ function About() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
-                    <h3 className="text-2xl text-center font-bold mb-8">💼Skills</h3>
+                    <h3 className="text-2xl text-center font-bold mb-8">👨🏻‍💻Skills</h3>
                     <div className="flex flex-wrap justify-center gap-2">
                         {skills.map((skill, index) => (
                             <span key={index} className="bg-blue-500/10 text-blue-400 py-1 px-3 rounded-full text-balance hover:bg-blue-500/20 hover:shadow-[9_2px_8px_rgba(59,130,22.46,0.2)] transition cursor-pointer">
@@ -42,6 +42,42 @@ function About() {
                         ))}
                     </div>
                 </div>
+                <div className="p-6 hover:-translate-y-1 transition-all rounded-xl">
+                    <h3 className="text-2xl text-center font-bold mb-8">📚Education</h3>
+                    <ul className="pl-5 list-disc text-gray-300 list-inside text-lg">
+                        <li className="mb-2">
+                            <strong><em>Bachelors of Applied Computer Science</em></strong> - Dalhousie University (2021 - 2025)
+                        </li>
+                        <li className="mb-2">
+                            <strong><em>Diploma in Computer Engineering</em></strong> - VPMP Polytechnic (2018 - 2021)
+                        </li> 
+                    </ul>
+                </div>
+            </div>
+            <div className="p-6 hover:-translate-y-1 transition-all rounded-xl">
+            <h3 className="text-2xl text-center font-bold mb-8">💼Work Experience</h3>
+            <ul className="pl-5 list-disc list-inside text-lg text-gray-300">
+                <li>
+                    <strong className="text-blue-400"><em>Data Validation Associate</em></strong> - Symcor Inc (Nov 2021 - Present)
+                    <ul className="pl-5 list-disc list-inside text-lg text-gray-300">
+                        <li>Ensured data integrity by diligently keying and validating financial data on Global Business Solution application with 95% accuracy.</li>
+                        <li>Analyzed financial transactions to find potential gaps, frauds or issues and adjusted them to those who required special 
+                        handling. </li>
+                        <li>Through my knowledge and efficiency, I achieved 100% client satisfaction rate for 3 years in a row.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong className="text-blue-400"><em>Software Developer Intern</em></strong> - BrainyBeams Technologies (Oct 2020-June 2021)
+                    <ul className="pl-5 list-disc list-inside text-lg text-gray-300">
+                        <li>Engineered a robust e-commerce platform, emphasizing intuitiveness and advanced features for online shopping.</li>
+                        <li>Utilized Django to design and implement a user-friendly interface, optimizing user registration, login, and password reset 
+                        processes to elevate the overall user experience.</li>
+                        <li>Integrated a comprehensive product catalog, simplifying user navigation and enhancing the shopping experience, 
+                        resulting in increased user satisfaction and higher conversion rates.</li>
+                        <li><strong>Tech Stack: </strong>Python, Git, Jira, Django, SQLite.</li>
+                    </ul>
+                </li>       
+            </ul>
             </div>
         </div>
     </section>
