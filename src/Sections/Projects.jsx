@@ -3,6 +3,7 @@ import dalChessClub from '../assets/dalChessClub.png'
 import DCA from '../assets/DCA.png'
 import BeachBluenoser from '../assets/BeachBluenoser.png'
 import QuickCash from '../assets/QuickCash.jpg'
+import RevealOnScroll from '../UI/RevealOnScroll'
 
 function Projects() {
     const [projects] = useState([
@@ -13,6 +14,7 @@ function Projects() {
     ]);
   return (
     <section id="projects" className="min-h-screen flex items-center font-mono justify-center py-20">
+        <RevealOnScroll>
         <div className="max-w-3xl mx-auto px-4">
             <h2 className="max-w-3xl text-4xl font-semibold mb-12 bg-gradient-to-r from-teal-500 to-indigo-600 bg-clip-text text-transparent text-center">Featured Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -32,6 +34,7 @@ function Projects() {
                 ))}
             </div>
         </div>
+        </RevealOnScroll>
     </section>
   )
 }

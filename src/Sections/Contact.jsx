@@ -1,6 +1,9 @@
+import RevealOnScroll from "../UI/RevealOnScroll";
+
 export const Contact = () => {
     return (
         <section id="contact" className="min-h-screen font-mono flex items-center justify-center py-20">
+            <RevealOnScroll>
             <div className="px-4 w-150">
                 <h2 className="max-w-3xl text-4xl font-semibold mb-12 bg-gradient-to-r from-teal-500 to-indigo-600 bg-clip-text text-transparent text-center">
                     Get In Touch with me
@@ -44,6 +47,7 @@ export const Contact = () => {
                     </button>
                 </form>
             </div>
+            </RevealOnScroll>
         </section>
     );
 };

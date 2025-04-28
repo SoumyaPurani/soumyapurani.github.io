@@ -1,4 +1,5 @@
 import React from 'react'
+import RevealOnScroll from '../UI/RevealOnScroll'
 
 function About() {
     const skills = [
@@ -24,6 +25,7 @@ function About() {
     ]
   return (
     <section id="about" className="min-h-screen font-mono flex items-center justify-center py-20">
+        <RevealOnScroll>
         <div className="max-w-3xl mx-auto px-4 ">
             <h2 className="max-w-3xl text-4xl font-semibold mb-12 bg-gradient-to-r from-teal-500 to-indigo-600 bg-clip-text text-transparent text-center">About Me</h2>
             <div className="p-8 mb-6 rounded-xl border-white/10 border-2 hover:-translate-y-1 transition-all">
@@ -80,6 +82,7 @@ function About() {
             </ul>
             </div>
         </div>
+        </RevealOnScroll>
     </section>
 )}
 

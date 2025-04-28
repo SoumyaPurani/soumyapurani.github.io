@@ -8,6 +8,8 @@ import AnimationWaves from './UI/AnimationWaves';
 import About from './Sections/About';
 import Projects from './Sections/Projects';
 import { Contact } from './Sections/Contact';
+import RevealOnScroll from './UI/RevealOnScroll';
+import Footer from './Sections/Footer';
 
 function App() {
   const [isLoading, setIsLoading] = React.useState(false);
@@ -19,11 +21,14 @@ function App() {
       )}
       <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
       <MobileMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
+      <RevealOnScroll>
       <Home />
       <AnimationWaves />
+      </RevealOnScroll>
       <About />
       <Projects />
       <Contact />
+      <Footer />
     </>
   )
 }
