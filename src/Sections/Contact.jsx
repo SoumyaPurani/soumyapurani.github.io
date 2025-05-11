@@ -6,7 +6,7 @@ export const Contact = () => {
             <RevealOnScroll>
             <div className="px-4 w-150 max-md:w-full max-md:max-w-4xl">
                 <h2 className="max-w-3xl text-4xl font-semibold mb-12 bg-gradient-to-r from-teal-500 to-indigo-600 bg-clip-text text-transparent text-center max-md:text-3xl max-md:mb-8">
-                    Get In Touch with me
+                    Get In Touch With Me
                 </h2>
                 <form action="https://formsubmit.co/soumyapurani@gmail.com" method="POST" className="space-y-6 max-md:space-y-4">
                     <div className="relative">

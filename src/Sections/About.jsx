@@ -59,7 +59,7 @@ function About() {
             <div className="p-6 hover:-translate-y-1 transition-all rounded-xl">
             <h3 className="text-2xl text-center font-bold mb-8">💼Work Experience</h3>
             <ul className="pl-5 list-disc list-inside text-lg text-gray-300">
-                <li>
+                <li className="list-none">
                     <strong className="text-blue-400"><em>Data Validation Associate</em></strong> - Symcor Inc (Nov 2021 - Present)
                     <ul className="pl-5 list-disc list-inside text-lg text-gray-300">
                         <li>Ensured data integrity by diligently keying and validating financial data on Global Business Solution application with 95% accuracy.</li>
@@ -68,7 +68,7 @@ function About() {
                         <li>Through my knowledge and efficiency, I achieved 100% client satisfaction rate for 3 years in a row.</li>
                     </ul>
                 </li>
-                <li>
+                <li className="list-none">
                     <strong className="text-blue-400"><em>Software Developer Intern</em></strong> - BrainyBeams Technologies (Oct 2020-June 2021)
                     <ul className="pl-5 list-disc list-inside text-lg text-gray-300">
                         <li>Engineered a robust e-commerce platform, emphasizing intuitiveness and advanced features for online shopping.</li>
