@@ -6,9 +6,9 @@ function About() {
         "HTML",
         "CSS",
         "JavaScript",
-        "React",
-        "Node.js",
-        "Express",
+        "ReactJS",
+        "NodeJS",
+        "ExpressJS",
         "MongoDB",
         "Python",
         "Django",
@@ -22,6 +22,11 @@ function About() {
         "REST APIs",
         "GraphQL",
         "Docker",
+        "Figma",
+        "Agile Methodologies",
+        "Problem Solving",
+        "Team Collaboration",
+        "Communication Skills"
     ]
   return (
     <section id="about" className="min-h-screen font-mono flex items-center justify-center py-20">
