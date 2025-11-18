@@ -3,49 +3,31 @@ import RevealOnScroll from '../UI/RevealOnScroll'
 
 function About() {
     const skills = [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "ReactJS",
-        "NodeJS",
-        "ExpressJS",
-        "MongoDB",
-        "Python",
-        "Django",
-        "Tailwind CSS",
-        "Bootstrap",
-        "Git",
-        "Java",
-        "C++",
-        "Firebase",
-        "SQL",
-        "REST APIs",
-        "GraphQL",
-        "Docker",
-        "Figma",
-        "Agile Methodologies",
-        "Problem Solving",
-        "Team Collaboration",
-        "Communication Skills"
+        "HTML", "CSS", "JavaScript", "ReactJS", "NodeJS", "ExpressJS", "MongoDB",
+        "Python", "Django", "Tailwind CSS", "Bootstrap", "Git", "Java", "C++",
+        "Firebase", "SQL", "REST APIs", "GraphQL", "Docker", "Figma",
+        "Agile Methodologies", "Problem Solving", "Team Collaboration", "Communication Skills"
     ]
   return (
-    <section id="about" className="min-h-screen font-mono flex items-center justify-center py-20">
-        <div className="max-w-3xl mx-auto px-4 ">
+    <section id="about" className="min-h-screen flex items-center justify-center py-20 relative">
+        <div className="max-w-3xl mx-auto px-4 z-10">
             <RevealOnScroll>
-            <h2 className="max-w-3xl text-4xl font-semibold mb-12 bg-gradient-to-r from-teal-500 to-indigo-600 bg-clip-text text-transparent text-center">About Me</h2>
-            <div className="p-8 mb-6 rounded-xl border-white/10 border-2 hover:-translate-y-1 transition-all">
-                <p className="text-gray-300 mb-5 text-xl">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] bg-clip-text text-transparent text-center">
+                About Me
+            </h2>
+            <div className="glass p-8 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
+                <p className="text-gray-300 mb-6 text-lg leading-relaxed">
                     I am a software engineer with a passion for building secure, interactive, and scalable software solutions. I have a strong foundation in computer science principles and a keen interest in exploring new technologies. My goal is to create innovative solutions that solve real-world problems and enhance user experiences.
                 </p>
             </div>
             </RevealOnScroll>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
                 <RevealOnScroll>
-                <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
-                    <h3 className="text-2xl text-center font-bold mb-8">👨🏻‍💻Skills</h3>
-                    <div className="flex flex-wrap justify-center gap-2">
+                <div className="glass p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
+                    <h3 className="text-xl font-bold mb-4 text-[var(--primary-color)]">Skills</h3>
+                    <div className="flex flex-wrap gap-2">
                         {skills.map((skill, index) => (
-                            <span key={index} className="bg-blue-500/10 text-blue-400 py-1 px-3 rounded-full text-balance hover:bg-blue-500/20 hover:shadow-[9_2px_8px_rgba(59,130,22.46,0.2)] transition cursor-pointer">
+                            <span key={index} className="bg-[rgba(0,243,255,0.1)] text-[var(--primary-color)] py-1 px-3 rounded-full text-sm hover:bg-[rgba(0,243,255,0.2)] hover:shadow-[0_0_10px_rgba(0,243,255,0.2)] transition cursor-pointer">
                                 {skill}
                             </span>
                         ))}
@@ -53,59 +35,54 @@ function About() {
                 </div>
                 </RevealOnScroll>
                 <RevealOnScroll>
-                <div className="p-6 hover:-translate-y-1 transition-all rounded-xl">
-                    <h3 className="text-2xl text-center font-bold mb-8">📚Education</h3>
-                    <ul className="pl-5 list-disc text-gray-300 list-inside text-lg">
-                        <li className="mb-2">
-                            <strong><em>Bachelors of Applied Computer Science</em></strong> - Dalhousie University (2021 - 2025)
+                <div className="glass p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
+                    <h3 className="text-xl font-bold mb-4 text-[var(--primary-color)]">Education</h3>
+                    <ul className="list-disc list-inside text-gray-300 space-y-2">
+                        <li>
+                            <strong>B.S. in Applied Computer Science</strong> - Dalhousie University (2021 - 2025)
                         </li>
-                        <li className="mb-2">
-                            <strong><em>Diploma in Computer Engineering</em></strong> - VPMP Polytechnic (2018 - 2021)
+                        <li>
+                            <strong>Diploma in Computer Engineering</strong> - VPMP Polytechnic (2018 - 2021)
                         </li> 
                     </ul>
                 </div>
                 </RevealOnScroll>
             </div>
             <RevealOnScroll>
-            <div className="p-6 hover:-translate-y-1 transition-all rounded-xl">
-            <h3 className="text-2xl text-center font-bold mb-8">💼Work Experience</h3>
-            <ul className="pl-5 list-disc list-inside text-lg text-gray-300">
-                <li className="list-none">
-                    <strong className="text-blue-500"><em>Software Engineer - AI Trainer</em></strong> - Outlier (June 2025 - Present)
-                    <ul className="pl-5 list-disc list-inside text-lg text-gray-300">
-                        <li>Independently evaluate and critique code generated by AI in response to technical prompts, ensuring it adheres to industry best practices, security standards, and efficiency requirements suitable for large enterprise environments.</li>
-                        <li>Make improvements and optimizations to AI-proposed solutions, ensuring that code is robust, accurate, and maintainable using front-end technologies such as React JS and Tailwind CSS, as well as back-end technologies including JavaScript, Node.js, and Java.</li>
-                        <li>Author, test, and submit high-quality code samples that address a wide array of real-world programming challenges, directly influencing the training data used to refine AI model performance and reliability for critical enterprise applications.</li>
-                        <li>Document and annotate all code submissions clearly, providing insightful feedback that highlights best practices and rationale behind design decisions for future AI learning.</li>
-                        <li>Uphold a high standard of software engineering excellence, producing code and feedback that meets the expectations of Fortune 500 clients and supports their complex business needs.</li>
-                        <li>Operate as a self-directed, individual contributor with accountability for quality output and timely delivery in a remote freelance capacity.</li>
+            <div className="glass p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all mt-6">
+            <h3 className="text-xl font-bold mb-4 text-[var(--primary-color)]">Work Experience</h3>
+            <div className="space-y-6 text-gray-300">
+                <div>
+                    <h4 className="font-bold text-[var(--text-color)]">Software Engineer - AI Trainer <span className="text-[var(--secondary-color)] text-sm ml-2">(June 2025 - Present)</span></h4>
+                    <p className="text-sm text-gray-400 mb-2">Outlier</p>
+                    <ul className="list-disc list-inside text-sm space-y-1">
+                        <li>Evaluated and critiqued AI-generated code for best practices and efficiency.</li>
+                        <li>Improved AI solutions using React, Tailwind, Node.js, and Java.</li>
+                        <li>Authored high-quality code samples for training AI models.</li>
                     </ul>
-                </li>
-                <li className="list-none">
-                    <strong className="text-blue-500"><em>Data Validation Associate</em></strong> - Symcor Inc (Nov 2021 - Present)
-                    <ul className="pl-5 list-disc list-inside text-lg text-gray-300">
-                        <li>Ensured data integrity by diligently keying and validating financial data on Global Business Solution application with 95% accuracy.</li>
-                        <li>Analyzed financial transactions to find potential gaps, frauds or issues and adjusted them to those who required special 
-                        handling. </li>
-                        <li>Through my knowledge and efficiency, I achieved 100% client satisfaction rate for 3 years in a row.</li>
+                </div>
+                <div>
+                    <h4 className="font-bold text-[var(--text-color)]">Data Validation Associate <span className="text-[var(--secondary-color)] text-sm ml-2">(Nov 2021 - Present)</span></h4>
+                    <p className="text-sm text-gray-400 mb-2">Symcor Inc</p>
+                    <ul className="list-disc list-inside text-sm space-y-1">
+                        <li>Ensured data integrity with 95% accuracy in financial data validation.</li>
+                        <li>Achieved 100% client satisfaction rate for 3 consecutive years.</li>
                     </ul>
-                </li>
-                <li className="list-none">
-                    <strong className="text-blue-500"><em>Software Developer Intern</em></strong> - BrainyBeams Technologies (Oct 2020-June 2021)
-                    <ul className="pl-5 list-disc list-inside text-lg text-gray-300">
-                        <li>Engineered a robust e-commerce platform, emphasizing intuitiveness and advanced features for online shopping.</li>
-                        <li>Utilized Django to design and implement a user-friendly interface, optimizing user registration, login, and password reset 
-                        processes to elevate the overall user experience.</li>
-                        <li>Integrated a comprehensive product catalog, simplifying user navigation and enhancing the shopping experience, 
-                        resulting in increased user satisfaction and higher conversion rates.</li>
-                        <li><strong>Tech Stack: </strong>Python, Git, Jira, Django, SQLite.</li>
+                </div>
+                <div>
+                    <h4 className="font-bold text-[var(--text-color)]">Software Developer Intern <span className="text-[var(--secondary-color)] text-sm ml-2">(Oct 2020 - June 2021)</span></h4>
+                    <p className="text-sm text-gray-400 mb-2">BrainyBeams Technologies</p>
+                    <ul className="list-disc list-inside text-sm space-y-1">
+                        <li>Engineered a robust e-commerce platform using Django and Python.</li>
+                        <li>Optimized user experience with intuitive interfaces and navigation.</li>
                     </ul>
-                </li>       
-            </ul>
+                </div>
+            </div>
             </div>
             </RevealOnScroll>
         </div>
     </section>
-)}
+  )
+}
 
 export default About
