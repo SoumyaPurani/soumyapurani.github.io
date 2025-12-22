@@ -1,10 +1,12 @@
 import RevealOnScroll from "../UI/RevealOnScroll";
+import ParticleField from '../3D/ParticleField';
 
 export const Contact = () => {
     return (
-        <section id="contact" className="min-h-screen font-mono flex items-center justify-center py-20 max-md:py-12 max-md:px-4">
+        <section id="contact" className="min-h-screen font-mono flex items-center justify-center py-20 max-md:py-12 max-md:px-4 relative overflow-hidden">
+            <ParticleField particleCount={150} />
             <RevealOnScroll>
-            <div className="px-4 w-150 max-md:w-full max-md:max-w-4xl">
+            <div className="px-4 w-150 max-md:w-full max-md:max-w-4xl z-10 relative">
                 <h2 className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] bg-clip-text text-transparent text-center">
                     Get In Touch With Me
                 </h2>
@@ -41,7 +43,7 @@ export const Contact = () => {
                     </div>
                     <button 
                         type="submit" 
-                        className="w-full bg-gradient-to-r flex justify-center cursor-pointer from-teal-500 to-indigo-600 px-6 rounded-3xl font-medium transition relative overflow-hidden hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] py-3 max-md:rounded-2xl max-md:py-2"
+                        className="w-full bg-gradient-to-r flex justify-center cursor-pointer from-[var(--primary-color)] to-[var(--secondary-color)] text-black font-bold px-6 rounded-3xl transition relative overflow-hidden hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] py-3 max-md:rounded-2xl max-md:py-2"
                     >
                         Submit
                     </button>

@@ -1,34 +1,49 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Logo from './Logo'
 import { MdMenu } from "react-icons/md";
+import { AiOutlineHome, AiOutlineFundProjectionScreen, AiOutlineUser } from "react-icons/ai";
 
 function Navbar({isMenuOpen, setIsMenuOpen}) {
+  const [navColour, updateNavbar] = useState(false);
+
+  function scrollHandler() {
+    if (window.scrollY >= 20) {
+      updateNavbar(true);
+    } else {
+      updateNavbar(false);
+    }
+  }
+
   useEffect(() => {
-    document.body.style.overflow = isMenuOpen ? 'hidden' : '';
-  }, [isMenuOpen]);
+    window.addEventListener("scroll", scrollHandler);
+    return () => window.removeEventListener("scroll", scrollHandler);
+  }, []);
+
   return (
-    <nav className="fixed top-0 w-full z-40 glass px-1 border-b border-[rgba(255,255,255,0.1)]">
-        <div className="max-w-5xl mx-auto px-4"> 
-            <div className="flex justify-between items-center font-mono h-16">
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${navColour ? "glass-nav py-2" : "bg-transparent py-4"}`}>
+        <div className="max-w-6xl mx-auto px-4"> 
+            <div className="flex justify-between items-center h-full">
                 <Logo />
-                {!isMenuOpen && <div onClick={() => setIsMenuOpen(prev => !prev)} className="text-2xl absolute right-7 z-40 md:hidden cursor-pointer font-mono text-white">
+                {!isMenuOpen && <div onClick={() => setIsMenuOpen(prev => !prev)} className="text-2xl absolute right-7 z-50 md:hidden cursor-pointer text-white">
                   <MdMenu />
                 </div>}
-                <div className="flex md:flex items-center space-x-8">
-                  <div className="hidden md:flex items-center space-x-8">
-                    <a href="#home" className="text-gray-300 text-lg hover:text-[var(--primary-color)] transition-colors duration-300">
-                      {">"} Home
+                <div className="hidden md:flex items-center space-x-8">
+                    <a href="#home" className="flex items-center gap-2 text-lg text-white font-medium hover:text-[var(--primary-color)] transition-all relative group">
+                      <AiOutlineHome className="mb-1" /> Home
+                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[var(--primary-color)] group-hover:w-full transition-all duration-300"></span>
                     </a>
-                    <a href="#about" className="text-gray-300 text-lg hover:text-[var(--primary-color)] transition-colors duration-300">
-                      {">"} About
+                    <a href="#about" className="flex items-center gap-2 text-lg text-white font-medium hover:text-[var(--primary-color)] transition-all relative group">
+                      <AiOutlineUser className="mb-1" /> About
+                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[var(--primary-color)] group-hover:w-full transition-all duration-300"></span>
                     </a>
-                    <a href="#projects" className="text-gray-300 text-lg hover:text-[var(--primary-color)] transition-colors duration-300">
-                      {">"} Projects
+                    <a href="#projects" className="flex items-center gap-2 text-lg text-white font-medium hover:text-[var(--primary-color)] transition-all relative group">
+                      <AiOutlineFundProjectionScreen className="mb-1" /> Projects
+                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[var(--primary-color)] group-hover:w-full transition-all duration-300"></span>
                     </a>
-                    <a href="#contact" className="text-gray-300 text-lg hover:text-[var(--primary-color)] transition-colors duration-300">
-                      {">"} Contact
+                    <a href="#contact" className="flex items-center gap-2 text-lg text-white font-medium hover:text-[var(--primary-color)] transition-all relative group">
+                       Contact
+                       <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[var(--primary-color)] group-hover:w-full transition-all duration-300"></span>
                     </a>
-                  </div>
                 </div>
             </div>
         </div>

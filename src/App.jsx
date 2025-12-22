@@ -22,7 +22,7 @@ function App() {
         <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
         <MobileMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
         <RevealOnScroll>
-        <Home />
+        <Home startTyping={isLoaded} />
         </RevealOnScroll>
         <About />
         <Projects />

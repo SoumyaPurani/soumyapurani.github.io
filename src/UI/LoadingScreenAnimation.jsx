@@ -1,40 +1,36 @@
 import React, { useEffect, useState } from 'react'
 
 function LoadingScreenAnimation({ onComplete }) {
-    const [text, setText] = useState("");
-    const fullText = "Welcome to my portfolio. Glad to have you here!";
-    
-    useEffect(() => {
-        let index = 0;
-        const interval = setInterval(() => {
-            setText(fullText.substring(0, index + 1));
-            index++;
-            if (index >= fullText.length) {
-                clearInterval(interval);
-                setTimeout(() => {
-                    onComplete();
-                }, 1000);
-            }
-        }, 50);
-        return () => clearInterval(interval);
-    }, [onComplete]);
+  const [progress, setProgress] = useState(0)
 
-    return (
-        <div className="fixed inset-0 z-50 bg-black text-gray-100 flex flex-col items-center justify-center gap-5 max-md:gap-3">
-            <div className="w-[300px] max-md:max-w-[80%] max-md:min-w-[250px] h-[3px] bg-gray-800 rounded relative overflow-hidden">
-                <div className="w-[40%] h-full bg-blue-500 shadow-[0_0_15px_#4179e3] animate-loading-bar"></div>
-            </div>
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setProgress((prev) => {
+        if (prev >= 100) {
+          clearInterval(timer)
+          setTimeout(onComplete, 200)
+          return 100
+        }
+        return prev + Math.random() * 10
+      })
+    }, 100)
 
-            <div className="mb-4 text-2xl max-md:text-xl font-mono font-semibold px-4 text-center">
-                {text}
-                <span className="animate-blink ml-1 text-2xl max-md:text-xl font-bold">|</span>
-            </div>
+    return () => clearInterval(timer)
+  }, [onComplete])
 
-            <div className="w-[300px] max-md:max-w-[80%] max-md:min-w-[250px] h-[3px] bg-gray-800 rounded relative overflow-hidden">
-                <div className="w-[40%] h-full bg-blue-500 shadow-[0_0_15px_#4179e3] animate-loading-bar"></div>
-            </div>
-        </div>
-    )
+  return (
+    <div className="fixed inset-0 z-50 bg-[var(--bg-color)] flex flex-col items-center justify-center transition-opacity duration-500">
+      <div className="w-48 h-1 bg-gray-800 rounded-full overflow-hidden relative">
+        <div 
+          className="h-full bg-[var(--primary-color)] shadow-[0_0_15px_rgba(0,229,255,0.7)] transition-all duration-200 ease-out"
+          style={{ width: `${progress}%` }}
+        />
+      </div>
+      <div className="mt-4 font-mono text-[var(--primary-color)] text-sm animate-pulse">
+        {Math.round(progress)}%
+      </div>
+    </div>
+  )
 }
 
 export default LoadingScreenAnimation

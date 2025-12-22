@@ -1,88 +1,112 @@
-import React from 'react'
 import RevealOnScroll from '../UI/RevealOnScroll'
+import { 
+    DiJavascript1, 
+    DiReact, 
+    DiNodejs, 
+    DiMongodb, 
+    DiPython, 
+    DiGit, 
+    DiJava, 
+    DiHtml5,
+    DiCss3
+} from "react-icons/di";
+import { 
+    SiFirebase, 
+    SiNextdotjs, 
+    SiPostgresql, 
+    SiTailwindcss, 
+    SiDocker, 
+    SiAndroidstudio,
+    SiJira,
+    SiFigma,
+    SiSpring
+} from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
+import { FaGithub } from "react-icons/fa";
 
 function About() {
-    const skills = [
-        "HTML", "CSS", "JavaScript", "ReactJS", "NodeJS", "ExpressJS", "MongoDB",
-        "Python", "Django", "Tailwind CSS", "Bootstrap", "Git", "Java", "C++",
-        "Firebase", "SQL", "REST APIs", "GraphQL", "Docker", "Figma",
-        "Agile Methodologies", "Problem Solving", "Team Collaboration", "Communication Skills"
-    ]
-  return (
-    <section id="about" className="min-h-screen flex items-center justify-center py-20 relative">
-        <div className="max-w-3xl mx-auto px-4 z-10">
-            <RevealOnScroll>
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] bg-clip-text text-transparent text-center">
-                About Me
-            </h2>
-            <div className="glass p-8 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
-                <p className="text-gray-300 mb-6 text-lg leading-relaxed">
-                    I am a software engineer with a passion for building secure, interactive, and scalable software solutions. I have a strong foundation in computer science principles and a keen interest in exploring new technologies. My goal is to create innovative solutions that solve real-world problems and enhance user experiences.
-                </p>
-            </div>
-            </RevealOnScroll>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+    return (
+        <section id="about" className="min-h-screen py-20 relative overflow-hidden">
+            <div className="container mx-auto px-6 lg:px-12">
+                
                 <RevealOnScroll>
-                <div className="glass p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
-                    <h3 className="text-xl font-bold mb-4 text-[var(--primary-color)]">Skills</h3>
-                    <div className="flex flex-wrap gap-2">
-                        {skills.map((skill, index) => (
-                            <span key={index} className="bg-[rgba(0,243,255,0.1)] text-[var(--primary-color)] py-1 px-3 rounded-full text-sm hover:bg-[rgba(0,243,255,0.2)] hover:shadow-[0_0_10px_rgba(0,243,255,0.2)] transition cursor-pointer">
-                                {skill}
-                            </span>
+                    <div className="flex flex-col items-center text-center mb-20 max-w-4xl mx-auto">
+                        <h1 className="text-3xl md:text-5xl font-bold mb-6">
+                            Know Who <span className="text-[var(--primary-color)]">I Am</span>
+                        </h1>
+                        <div className="glass p-8 rounded-xl border border-[rgba(255,255,255,0.05)] w-full">
+                            <p className="text-gray-300 mb-6 text-lg leading-relaxed">
+                                Hi Everyone, I am <span className="text-[var(--primary-color)] font-bold">Soumya Purani</span> from <span className="text-[var(--primary-color)] font-bold">Halifax, Nova Scotia</span>.
+                                <br /><br />
+                                I am currently a Software Engineer at Outlier and a Computer Science graduate from Dalhousie University.
+                                <br /><br />
+                                Apart from coding, some other activities that I love to do!
+                            </p>
+                            <ul className="list-none space-y-2 text-gray-300 inline-block text-left">
+                                    <li className="flex items-center gap-2"><span className="text-[var(--primary-color)]">➜</span> Playing Chess</li>
+                                    <li className="flex items-center gap-2"><span className="text-[var(--primary-color)]">➜</span> Watching Tech Videos</li>
+                                    <li className="flex items-center gap-2"><span className="text-[var(--primary-color)]">➜</span> Travelling</li>
+                            </ul>
+                        </div>
+                    </div>
+                </RevealOnScroll>
+
+                <RevealOnScroll>
+                    <h1 className="text-3xl md:text-4xl font-bold text-center mb-12">
+                        Professional <span className="text-[var(--primary-color)]">Skillset</span>
+                    </h1>
+                    
+                    <div className="flex flex-wrap justify-center gap-8 mb-20">
+                         {[
+                            { icon: <DiJavascript1 />, name: "JavaScript" },
+                            { icon: <DiReact />, name: "React" },
+                            { icon: <DiNodejs />, name: "Node.js" },
+                            { icon: <DiMongodb />, name: "MongoDB" },
+                            { icon: <SiNextdotjs />, name: "Next.js" },
+                            { icon: <DiGit />, name: "Git" },
+                            { icon: <SiFirebase />, name: "Firebase" },
+                            { icon: <DiPython />, name: "Python" },
+                            { icon: <DiJava />, name: "Java" },
+                            { icon: <SiTailwindcss />, name: "Tailwind" },
+                            { icon: <DiHtml5 />, name: "HTML5" },
+                            { icon: <DiCss3 />, name: "CSS" },
+                            { icon: <SiSpring />, name: "Spring" },
+                        ].map((skill, index) => (
+                            <div key={index} className="w-32 h-32 glass flex flex-col items-center justify-center rounded-lg border border-[rgba(0,229,255,0.1)] hover:border-[var(--primary-color)] hover:scale-105 transition-all cursor-pointer group shadow-[0_0_10px_rgba(0,0,0,0.2)]">
+                                <div className="text-5xl text-gray-300 group-hover:text-[var(--primary-color)] transition-colors duration-300">
+                                    {skill.icon}
+                                </div>
+                            </div>
                         ))}
                     </div>
-                </div>
                 </RevealOnScroll>
+
                 <RevealOnScroll>
-                <div className="glass p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
-                    <h3 className="text-xl font-bold mb-4 text-[var(--primary-color)]">Education</h3>
-                    <ul className="list-disc list-inside text-gray-300 space-y-2">
-                        <li>
-                            <strong>B.S. in Applied Computer Science</strong> - Dalhousie University (2021 - 2025)
-                        </li>
-                        <li>
-                            <strong>Diploma in Computer Engineering</strong> - VPMP Polytechnic (2018 - 2021)
-                        </li> 
-                    </ul>
-                </div>
+                    <h1 className="text-3xl md:text-4xl font-bold text-center mb-12">
+                        <span className="text-[var(--primary-color)]">Tools</span> I Use
+                    </h1>
+                    <div className="flex flex-wrap justify-center gap-8 mb-20">
+                         {[
+                            { icon: <VscVscode />, name: "VS Code" },
+                            { icon: <SiDocker />, name: "Docker" },
+                            { icon: <SiPostgresql />, name: "PostgreSQL" },
+                            { icon: <SiAndroidstudio />, name: "Android Studio" },
+                            { icon: <SiJira />, name: "Jira" },
+                            { icon: <SiFigma />, name: "Figma" },
+                            { icon: <FaGithub />, name: "GitHub" },
+                        ].map((tool, index) => (
+                            <div key={index} className="w-32 h-32 glass flex flex-col items-center justify-center rounded-lg border border-[rgba(0,229,255,0.1)] hover:border-[var(--primary-color)] hover:scale-105 transition-all cursor-pointer group shadow-[0_0_10px_rgba(0,0,0,0.2)]">
+                                <div className="text-5xl text-gray-300 group-hover:text-[var(--primary-color)] transition-colors duration-300">
+                                    {tool.icon}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </RevealOnScroll>
+
             </div>
-            <RevealOnScroll>
-            <div className="glass p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all mt-6">
-            <h3 className="text-xl font-bold mb-4 text-[var(--primary-color)]">Work Experience</h3>
-            <div className="space-y-6 text-gray-300">
-                <div>
-                    <h4 className="font-bold text-[var(--text-color)]">Software Engineer - AI Trainer <span className="text-[var(--secondary-color)] text-sm ml-2">(June 2025 - Present)</span></h4>
-                    <p className="text-sm text-gray-400 mb-2">Outlier</p>
-                    <ul className="list-disc list-inside text-sm space-y-1">
-                        <li>Evaluated and critiqued AI-generated code for best practices and efficiency.</li>
-                        <li>Improved AI solutions using React, Tailwind, Node.js, and Java.</li>
-                        <li>Authored high-quality code samples for training AI models.</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 className="font-bold text-[var(--text-color)]">Data Validation Associate <span className="text-[var(--secondary-color)] text-sm ml-2">(Nov 2021 - Present)</span></h4>
-                    <p className="text-sm text-gray-400 mb-2">Symcor Inc</p>
-                    <ul className="list-disc list-inside text-sm space-y-1">
-                        <li>Ensured data integrity with 95% accuracy in financial data validation.</li>
-                        <li>Achieved 100% client satisfaction rate for 3 consecutive years.</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 className="font-bold text-[var(--text-color)]">Software Developer Intern <span className="text-[var(--secondary-color)] text-sm ml-2">(Oct 2020 - June 2021)</span></h4>
-                    <p className="text-sm text-gray-400 mb-2">BrainyBeams Technologies</p>
-                    <ul className="list-disc list-inside text-sm space-y-1">
-                        <li>Engineered a robust e-commerce platform using Django and Python.</li>
-                        <li>Optimized user experience with intuitive interfaces and navigation.</li>
-                    </ul>
-                </div>
-            </div>
-            </div>
-            </RevealOnScroll>
-        </div>
-    </section>
-  )
+        </section>
+    )
 }
 
 export default About

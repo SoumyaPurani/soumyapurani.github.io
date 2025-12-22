@@ -1,12 +1,14 @@
 import React, { useEffect, useRef } from 'react'
 
-function RevealOnScroll({children}) {
+function RevealOnScroll({children, delay = 0}) {
     const ref = useRef();
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
-                    ref.current.classList.add('visible');
+                    setTimeout(() => {
+                      if(ref.current) ref.current.classList.add('visible');
+                    }, delay);
                 }
             },
             {
@@ -17,7 +19,7 @@ function RevealOnScroll({children}) {
             observer.observe(ref.current);
         }
         return () => observer.disconnect();
-    });
+    }, [delay]);
   return (
     <div ref={ref} className="reveal-on-scroll">
         {children}
