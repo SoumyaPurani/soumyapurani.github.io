@@ -8,7 +8,6 @@ function Home({ startTyping }) {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
         <ParticleField particleCount={150} />
-
         <div className="container mx-auto px-6 lg:px-12 z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-left">
                 <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">

@@ -7,6 +7,7 @@ import QuickCash from '../assets/QuickCash.jpg'
 import RevealOnScroll from '../UI/RevealOnScroll'
 import ProjectCard3D from '../3D/ProjectCard3D'
 import { BsGithub } from "react-icons/bs";
+import ParticleField from '../3D/ParticleField'
 
 function Projects() {
     const [projects] = useState([
@@ -18,6 +19,7 @@ function Projects() {
     ]);
   return (
     <section id="projects" className="min-h-screen py-20 relative overflow-hidden">
+        <ParticleField particleCount={150} />
         <RevealOnScroll>
         <div className="container mx-auto px-6 lg:px-12 z-10 relative">
             <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">

@@ -1,4 +1,5 @@
 import RevealOnScroll from '../UI/RevealOnScroll'
+import ParticleField from '../3D/ParticleField'
 import { 
     DiJavascript1, 
     DiReact, 
@@ -27,6 +28,7 @@ import { FaGithub } from "react-icons/fa";
 function About() {
     return (
         <section id="about" className="min-h-screen py-20 relative overflow-hidden">
+            <ParticleField particleCount={150} />
             <div className="container mx-auto px-6 lg:px-12">
                 
                 <RevealOnScroll>
