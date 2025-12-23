@@ -20,10 +20,20 @@ import {
     SiAndroidstudio,
     SiJira,
     SiFigma,
-    SiSpring
+    SiSpring,
+    SiPostman,
+    SiMariadbfoundation,
+    SiGnubash,
+    SiSupabase,
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
-import { FaGithub } from "react-icons/fa";
+import { 
+    FaGithub,
+    FaBootstrap,
+    FaPhp,
+    FaConfluence,
+    FaAws,
+ } from "react-icons/fa";
 
 function About() {
     return (
@@ -40,7 +50,7 @@ function About() {
                             <p className="text-gray-300 mb-6 text-lg leading-relaxed">
                                 Hi Everyone, I am <span className="text-[var(--primary-color)] font-bold">Soumya Purani</span> from <span className="text-[var(--primary-color)] font-bold">Halifax, Nova Scotia</span>.
                                 <br /><br />
-                                I am currently a Software Engineer at Outlier and a Computer Science graduate from Dalhousie University.
+                                I am a Software Engineer at Outlier, a freelance developer and a Computer Science graduate from Dalhousie University.
                                 <br /><br />
                                 Apart from coding, some other activities that I love to do!
                             </p>
@@ -73,6 +83,10 @@ function About() {
                             { icon: <DiHtml5 />, name: "HTML5" },
                             { icon: <DiCss3 />, name: "CSS" },
                             { icon: <SiSpring />, name: "Spring" },
+                            { icon: <FaBootstrap />, name: "Bootstrap" },
+                            { icon: <FaPhp />, name: "PHP" },
+                            { icon: <SiMariadbfoundation />, name: "MariaDB" },
+                            { icon: <SiGnubash />, name: "Bash" },
                         ].map((skill, index) => (
                             <div key={index} className="w-32 h-32 glass flex flex-col items-center justify-center rounded-lg border border-[rgba(0,229,255,0.1)] hover:border-[var(--primary-color)] hover:scale-105 transition-all cursor-pointer group shadow-[0_0_10px_rgba(0,0,0,0.2)]">
                                 <div className="text-5xl text-gray-300 group-hover:text-[var(--primary-color)] transition-colors duration-300">
@@ -94,8 +108,12 @@ function About() {
                             { icon: <SiPostgresql />, name: "PostgreSQL" },
                             { icon: <SiAndroidstudio />, name: "Android Studio" },
                             { icon: <SiJira />, name: "Jira" },
+                            { icon: <FaConfluence />, name: "Confluence" },
                             { icon: <SiFigma />, name: "Figma" },
                             { icon: <FaGithub />, name: "GitHub" },
+                            { icon: <SiPostman />, name: "Postman" },
+                            { icon: <SiSupabase />, name: "Supabase" },
+                            { icon: <FaAws />, name: "AWS" },
                         ].map((tool, index) => (
                             <div key={index} className="w-32 h-32 glass flex flex-col items-center justify-center rounded-lg border border-[rgba(0,229,255,0.1)] hover:border-[var(--primary-color)] hover:scale-105 transition-all cursor-pointer group shadow-[0_0_10px_rgba(0,0,0,0.2)]">
                                 <div className="text-5xl text-gray-300 group-hover:text-[var(--primary-color)] transition-colors duration-300">

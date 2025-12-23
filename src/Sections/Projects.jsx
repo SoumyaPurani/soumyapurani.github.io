@@ -8,6 +8,7 @@ import RevealOnScroll from '../UI/RevealOnScroll'
 import ProjectCard3D from '../3D/ProjectCard3D'
 import { BsGithub } from "react-icons/bs";
 import ParticleField from '../3D/ParticleField'
+import InProgress from '../assets/InProgress.jpg'
 
 function Projects() {
     const [projects] = useState([
@@ -15,7 +16,8 @@ function Projects() {
         {Image: DCA, title: "Dalhousie Consulting Association", description: "A website for the Dalhousie Consulting Association, built with React and NodeJS. Giving full control of website content to the client using Strapi.", technologies: ["React", "NodeJS", "Strapi", "REST APIs", "Docker", "PostgreSQL", "Git"], ghLink: "https://github.com/SoumyaPurani/DalConsultingAssociation"},
         {Image: BeachBluenoser, title: "Beach Bluenoser", description: "An android application for tourists visiting Nova Scotia. It provides information about the best beaches in the province, including directions, weather, and nearby attractions.", technologies: ["Java", "Android Studio", "Google Cloud Platform", "Firebase", "Git"], ghLink: "https://github.com/SoumyaPurani/BeachBluenoser"},
         {Image: QuickCash, title: "Quick Cash", description: "An android application to help people find small and sponteneous job while also allowing employers to post occasional jobs.", technologies: ["Java", "Android Studio", "Git", "Firebase", "Jira", "Google Cloud Platform"], ghLink: "https://github.com/SoumyaPurani/QuickCash"},
-        {Image: cacheImg, title: "Cache Simulator", description: "A cache simulator built C language to understand the working of cache.", technologies: ["C", "Git"], ghLink: "https://github.com/SoumyaPurani/CacheSimulator"}
+        {Image: cacheImg, title: "Cache Simulator", description: "A cache simulator built C language to understand the working of cache.", technologies: ["C", "Git"], ghLink: "https://github.com/SoumyaPurani/CacheSimulator"},
+        {Image: InProgress, title: "Ecommerce Website", description: "An Ecommerce website built with React and SpringBoot. It features a responsive design, user-friendly interface, and production grade complex features.", technologies: ["React", "SpringBoot", "REST APIs", "H2", "Git", "Jakarta Persistence API", "JSON Web Token", "AWS"], ghLink: "https://github.com/SoumyaPurani/SpringBootEcomm"}
     ]);
   return (
     <section id="projects" className="min-h-screen py-20 relative overflow-hidden">
@@ -33,7 +35,7 @@ function Projects() {
                         <div className="glass h-full rounded-xl overflow-hidden border border-[rgba(0,229,255,0.1)] hover:border-[var(--primary-color)] hover:shadow-[0_0_20px_rgba(0,229,255,0.2)] transition-all flex flex-col justify-between">
                             
                             <div className="relative overflow-hidden group">
-                                <img src={project.Image} alt={project.title} className="w-full h-56 object-cover object-top hover:scale-110 transition-transform duration-500 opacity-90 hover:opacity-100" />
+                                <img src={project.Image} alt={project.title} className="w-full h-56 object-cover object-center hover:scale-110 transition-transform duration-500" />
                             </div>
 
                             <div className="p-6 flex flex-col flex-grow">
@@ -41,6 +43,14 @@ function Projects() {
                                 <p className="text-gray-300 mb-6 text-sm text-center leading-relaxed flex-grow">
                                     {project.description}
                                 </p>
+                                
+                                <div className="flex flex-wrap gap-2 mb-6 justify-center">
+                                    {project.technologies.map((tech, key) => (
+                                        <span key={key} className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all">
+                                            {tech}
+                                        </span>
+                                    ))}
+                                </div>
                                 
                                 <div className="flex justify-center gap-4 mt-auto">
                                     <a href={project.ghLink} target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-[var(--accent-color)] text-white rounded flex items-center gap-2 hover:bg-[var(--secondary-color)] transition-colors text-sm font-bold">
