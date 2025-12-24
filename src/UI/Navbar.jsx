@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import Logo from './Logo'
 import { MdMenu } from "react-icons/md";
 import { AiOutlineHome, AiOutlineFundProjectionScreen, AiOutlineUser } from "react-icons/ai";
+import { BsBriefcase } from "react-icons/bs";
+import { FaGraduationCap } from "react-icons/fa";
 
 function Navbar({isMenuOpen, setIsMenuOpen}) {
   const [navColour, updateNavbar] = useState(false);
@@ -34,6 +36,14 @@ function Navbar({isMenuOpen, setIsMenuOpen}) {
                     </a>
                     <a href="#about" className="flex items-center gap-2 text-lg text-white font-medium hover:text-[var(--primary-color)] transition-all relative group">
                       <AiOutlineUser className="mb-1" /> About
+                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[var(--primary-color)] group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="#experience" className="flex items-center gap-2 text-lg text-white font-medium hover:text-[var(--primary-color)] transition-all relative group">
+                      <BsBriefcase className="mb-1" /> Experience
+                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[var(--primary-color)] group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="#education" className="flex items-center gap-2 text-lg text-white font-medium hover:text-[var(--primary-color)] transition-all relative group">
+                      <FaGraduationCap className="mb-1" /> Education
                       <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[var(--primary-color)] group-hover:w-full transition-all duration-300"></span>
                     </a>
                     <a href="#projects" className="flex items-center gap-2 text-lg text-white font-medium hover:text-[var(--primary-color)] transition-all relative group">

@@ -5,6 +5,8 @@ import MobileMenu from './UI/MobileMenu'
 import LoadingScreenAnimation from './UI/LoadingScreenAnimation';
 import Home from './Sections/Home'
 import About from './Sections/About';
+import Experience from './Sections/Experience';
+import Education from './Sections/Education';
 import Projects from './Sections/Projects';
 import { Contact } from './Sections/Contact';
 import RevealOnScroll from './UI/RevealOnScroll';
@@ -25,6 +27,8 @@ function App() {
         <Home startTyping={isLoaded} />
         </RevealOnScroll>
         <About />
+        <Experience />
+        <Education />
         <Projects />
         <Contact />
         <Footer />
