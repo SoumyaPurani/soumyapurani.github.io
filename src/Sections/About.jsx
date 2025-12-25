@@ -48,7 +48,7 @@ function About() {
                         </h1>
                         <div className="glass p-8 rounded-xl border border-[rgba(255,255,255,0.05)] w-full">
                             <p className="text-gray-300 mb-6 text-lg leading-relaxed">
-                                Hi Everyone, I am <span className="text-[var(--primary-color)] font-bold">Soumya Purani</span> from <span className="text-[var(--primary-color)] font-bold">Halifax, Nova Scotia</span>.
+                                Hi Everyone, I am <span className="text-[var(--primary-color)] font-bold">Soumya Purani</span> currently based in <span className="text-[var(--primary-color)] font-bold">Canada</span>.
                                 <br /><br />
                                 I am a Software Engineer at Outlier, a freelance developer and a Computer Science graduate from Dalhousie University.
                                 <br /><br />
