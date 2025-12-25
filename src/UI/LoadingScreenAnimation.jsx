@@ -6,12 +6,15 @@ function LoadingScreenAnimation({ onComplete }) {
   useEffect(() => {
     const timer = setInterval(() => {
       setProgress((prev) => {
-        if (prev >= 100) {
+        const increment = Math.random() * 10
+        const newProgress = Math.min(prev + increment, 100)
+        
+        if (newProgress >= 100) {
           clearInterval(timer)
           setTimeout(onComplete, 200)
           return 100
         }
-        return prev + Math.random() * 10
+        return newProgress
       })
     }, 100)
 
