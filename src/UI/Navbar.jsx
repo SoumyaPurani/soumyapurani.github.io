@@ -4,6 +4,7 @@ import { MdMenu } from "react-icons/md";
 import { AiOutlineHome, AiOutlineFundProjectionScreen, AiOutlineUser } from "react-icons/ai";
 import { BsBriefcase } from "react-icons/bs";
 import { FaGraduationCap } from "react-icons/fa";
+import { FaPhone } from "react-icons/fa6";
 
 function Navbar({isMenuOpen, setIsMenuOpen}) {
   const [navColour, updateNavbar] = useState(false);
@@ -51,7 +52,7 @@ function Navbar({isMenuOpen, setIsMenuOpen}) {
                       <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[var(--primary-color)] group-hover:w-full transition-all duration-300"></span>
                     </a>
                     <a href="#contact" className="flex items-center gap-2 text-lg text-white font-medium hover:text-[var(--primary-color)] transition-all relative group">
-                       Contact
+                       <FaPhone className="mb-1" /> Contact
                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[var(--primary-color)] group-hover:w-full transition-all duration-300"></span>
                     </a>
                 </div>
