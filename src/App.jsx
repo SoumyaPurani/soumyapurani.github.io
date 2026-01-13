@@ -1,5 +1,4 @@
 import React from 'react'
-import './App.css'
 import Navbar from './UI/Navbar'
 import MobileMenu from './UI/MobileMenu'
 import LoadingScreenAnimation from './UI/LoadingScreenAnimation';
