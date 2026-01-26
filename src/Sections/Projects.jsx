@@ -25,7 +25,7 @@ function Projects() {
         <RevealOnScroll>
         <div className="container mx-auto px-6 lg:px-12 z-10 relative">
             <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">
-                My Recent <span className="text-[var(--primary-color)]">Works</span>
+                My Recent <span className="text-[var(--primary-color)]">Projects</span>
                 <p className="text-lg text-gray-400 mt-4 font-normal">Here are a few projects I've worked on.</p>
             </h2>
 

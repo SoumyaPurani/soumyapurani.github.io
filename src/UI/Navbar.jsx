@@ -51,6 +51,10 @@ function Navbar({isMenuOpen, setIsMenuOpen}) {
                       <AiOutlineFundProjectionScreen className="mb-1" /> Projects
                       <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[var(--primary-color)] group-hover:w-full transition-all duration-300"></span>
                     </a>
+                    <a href="#freelance" className="flex items-center gap-2 text-lg text-white font-medium hover:text-[var(--primary-color)] transition-all relative group">
+                      <BsBriefcase className="mb-1" /> Freelance
+                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[var(--primary-color)] group-hover:w-full transition-all duration-300"></span>
+                    </a>
                     <a href="#contact" className="flex items-center gap-2 text-lg text-white font-medium hover:text-[var(--primary-color)] transition-all relative group">
                        <FaPhone className="mb-1" /> Contact
                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[var(--primary-color)] group-hover:w-full transition-all duration-300"></span>

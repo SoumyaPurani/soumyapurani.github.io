@@ -7,6 +7,7 @@ import About from './Sections/About';
 import Experience from './Sections/Experience';
 import Education from './Sections/Education';
 import Projects from './Sections/Projects';
+import Freelance from './Sections/Freelance';
 import { Contact } from './Sections/Contact';
 import RevealOnScroll from './UI/RevealOnScroll';
 import Footer from './Sections/Footer';
@@ -29,6 +30,7 @@ function App() {
         <Experience />
         <Education />
         <Projects />
+        <Freelance />
         <Contact />
         <Footer />
       </div>

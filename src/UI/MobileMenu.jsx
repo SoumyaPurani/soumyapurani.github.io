@@ -23,6 +23,9 @@ function MobileMenu({isMenuOpen, setIsMenuOpen}) {
         <a onClick={() => setIsMenuOpen(false)} href="#projects" className={`text-2xl font-mono font-semibold text-white my-4 transform transition-transform duration-300 hover:text-[var(--primary-color)] hover:shadow-[0_0_5px_rgba(0,243,255,0.5)] ${isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}>
           {">"} Projects
         </a>
+        <a onClick={() => setIsMenuOpen(false)} href="#freelance" className={`text-2xl font-mono font-semibold text-white my-4 transform transition-transform duration-300 hover:text-[var(--primary-color)] hover:shadow-[0_0_5px_rgba(0,243,255,0.5)] ${isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}>
+          {">"} Freelance
+        </a>
         <a onClick={() => setIsMenuOpen(false)} href="#contact" className={`text-2xl font-mono font-semibold text-white my-4 transform transition-transform duration-300 hover:text-[var(--primary-color)] hover:shadow-[0_0_5px_rgba(0,243,255,0.5)] ${isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}>
           {">"} Contact
         </a>
