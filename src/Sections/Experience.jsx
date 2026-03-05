@@ -5,6 +5,18 @@ import ParticleField from '../3D/ParticleField';
 function Experience() {
     const experiences = [
         {
+            role: "Tier 2 Application Support",
+            company: "Symcor",
+            period: "March 2026 - Present",
+            description: [
+                "Provide Tier 2 production application support in a large enterprise environment by triaging, diagnosing, and resolving incidents via ITIL/EIM processes, meeting SLAs through effective prioritization and escalation management.",
+                "Troubleshoot issues using application/system log analysis and knowledge repositories; collaborate with Level 2, Infrastructure, and Level 3 (Development) teams on complex incidents and required application changes.",
+                "Create and maintain deployment/support documentation and knowledge articles; capture standardized resolution steps to improve consistency and speed of incident remediation.",
+                "Execute routine application maintenance and support disaster recovery activities (DR readiness, documented failover steps, troubleshooting during failover); contribute to problem management by documenting incidents and supporting root-cause and long-term remediation efforts."
+            ],
+            technologies: [ "ITIL", "EIM", "SQL", "Linux", "Bash", "Databases"]
+        },
+        {
             role: "Software Engineer",
             company: "Outlier",
             period: "June 2025 - Present",
