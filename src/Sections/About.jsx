@@ -56,7 +56,7 @@ const SkillCard = ({ icon, name, activeTooltip, setActiveTooltip, index }) => {
     return (
         <div
             className={`
-                relative w-[100px] h-[100px] md:w-[110px] md:h-[110px] glass flex items-center justify-center rounded-xl
+                relative w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-[110px] md:h-[110px] glass flex items-center justify-center rounded-xl
                 border transition-all duration-400 cursor-pointer group
                 ${isActive
                     ? 'z-50 border-[var(--primary-color)]/40 bg-[var(--primary-color)]/[0.04] shadow-[0_0_20px_rgba(0,229,255,0.15)]'
@@ -69,7 +69,7 @@ const SkillCard = ({ icon, name, activeTooltip, setActiveTooltip, index }) => {
             onMouseLeave={handleMouseLeave}
         >
             <div className={`
-                text-4xl transition-all duration-300
+                text-3xl sm:text-4xl transition-all duration-300
                 ${isActive
                     ? 'text-[var(--primary-color)] scale-110'
                     : 'text-white/40 group-hover:text-white/70'
@@ -187,7 +187,7 @@ function About() {
                                 Professional <span className="text-gradient">Skillset</span>
                             </h2>
                         </div>
-                        <div className="flex flex-wrap justify-center gap-4 md:gap-5 pt-8 pb-4 skill-card-container max-w-4xl mx-auto">
+                        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-5 pt-8 pb-4 skill-card-container max-w-4xl mx-auto">
                             {skills.map((skill, index) => (
                                 <SkillCard
                                     key={index}
@@ -211,7 +211,7 @@ function About() {
                                 <span className="text-gradient">Tools</span> I Use
                             </h2>
                         </div>
-                        <div className="flex flex-wrap justify-center gap-4 md:gap-5 pt-8 pb-4 skill-card-container max-w-4xl mx-auto">
+                        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-5 pt-8 pb-4 skill-card-container max-w-4xl mx-auto">
                             {tools.map((tool, index) => (
                                 <SkillCard
                                     key={index}
