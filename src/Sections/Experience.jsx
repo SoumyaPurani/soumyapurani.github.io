@@ -14,7 +14,7 @@ function Experience() {
                 "Create and maintain deployment/support documentation and knowledge articles; capture standardized resolution steps to improve consistency and speed of incident remediation.",
                 "Execute routine application maintenance and support disaster recovery activities (DR readiness, documented failover steps, troubleshooting during failover); contribute to problem management by documenting incidents and supporting root-cause and long-term remediation efforts."
             ],
-            technologies: [ "ITIL", "EIM", "SQL", "Linux", "Bash", "Databases"]
+            technologies: ["ITIL", "EIM", "SQL", "Linux", "Bash", "Databases"]
         },
         {
             role: "Software Engineer",
@@ -26,7 +26,7 @@ function Experience() {
                 "Authored and tested high-quality code samples, directly influencing AI model performance for enterprise applications.",
                 "Improved application reliability by identifying issues across front‑end, back‑end, and database layers."
             ],
-            technologies: [ "ReactJS", "NodeJS", "JavaScript", "TailWind CSS"]
+            technologies: ["ReactJS", "NodeJS", "JavaScript", "TailWind CSS"]
         },
         {
             role: "Freelance Developer",
@@ -53,50 +53,66 @@ function Experience() {
     ];
 
     return (
-        <section id="experience" className="min-h-screen py-20 relative overflow-hidden">
+        <section id="experience" className="py-24 relative overflow-hidden">
             <ParticleField particleCount={100} />
-            
-            <RevealOnScroll>
-                <div className="container mx-auto px-6 lg:px-12 z-10 relative">
-                    <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">
-                        Professional <span className="text-[var(--primary-color)]">Experience</span>
-                    </h2>
 
-                    <div className="max-w-4xl mx-auto space-y-8">
+            <div className="container mx-auto px-6 lg:px-12 z-10 relative">
+                <RevealOnScroll>
+                    <div className="text-center mb-16">
+                        <p className="font-mono text-xs text-(--text-muted) tracking-widest uppercase mb-3">Career</p>
+                        <h2 className="section-heading text-3xl md:text-5xl font-bold tracking-tight">
+                            Professional <span className="text-gradient">Experience</span>
+                        </h2>
+                    </div>
+                </RevealOnScroll>
+
+                <div className="max-w-4xl mx-auto relative">
+                    {/* Timeline line */}
+                    <div className="absolute left-[19px] md:left-8 top-0 bottom-0 w-px bg-linear-to-b from-(--primary-color)/20 via-(--primary-color)/10 to-transparent" />
+
+                    <div className="space-y-6">
                         {experiences.map((exp, index) => (
-                            <div key={index} className="glass p-8 rounded-xl border border-[rgba(255,255,255,0.05)] hover:border-[var(--primary-color)] transition-colors group">
-                                <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
-                                    <div>
-                                        <h3 className="text-2xl font-bold text-white group-hover:text-[var(--primary-color)] transition-colors">
-                                            {exp.role}
-                                        </h3>
-                                        <p className="text-lg text-gray-400">{exp.company}</p>
-                                    </div>
-                                    <span className="text-sm text-gray-400 bg-blue-500/10 px-3 py-1 rounded-full mt-2 md:mt-0">
-                                        {exp.period}
-                                    </span>
-                                </div>
-                                
-                                <ul className="list-disc list-inside text-gray-300 mb-6 space-y-2">
-                                    {exp.description.map((desc, i) => (
-                                        <li key={i}>
-                                            {desc}
-                                        </li>
-                                    ))}
-                                </ul>
+                            <RevealOnScroll key={index} delay={index * 100}>
+                                <div className="relative pl-12 md:pl-20 group">
+                                    {/* Timeline dot */}
+                                    <div className="absolute left-[15px] md:left-[28px] top-8 w-[9px] h-[9px] rounded-full bg-(--bg-color) border-2 border-(--primary-color)/40 group-hover:border-(--primary-color) group-hover:shadow-[0_0_10px_var(--primary-glow)] transition-all duration-500" />
 
-                                <div className="flex flex-wrap gap-2">
-                                    {exp.technologies.map((tech, key) => (
-                                        <span key={key} className="text-xs bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full hover:bg-blue-500/20 transition-all">
-                                            {tech}
-                                        </span>
-                                    ))}
+                                    <div className="glass p-6 md:p-8 rounded-2xl border border-white/4 hover:border-(--primary-color)/20 transition-all duration-500 group-hover:bg-(--primary-color)/1">
+                                        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 gap-2">
+                                            <div>
+                                                <h3 className="text-lg md:text-xl font-bold text-white/90 group-hover:text-white transition-colors">
+                                                    {exp.role}
+                                                </h3>
+                                                <p className="text-white/40 text-sm">{exp.company}</p>
+                                            </div>
+                                            <span className="font-mono text-xs text-(--text-muted) bg-white/3 px-3 py-1.5 rounded-md border border-white/4 whitespace-nowrap">
+                                                {exp.period}
+                                            </span>
+                                        </div>
+
+                                        <ul className="space-y-2.5 mb-5">
+                                            {exp.description.map((desc, i) => (
+                                                <li key={i} className="flex gap-3 text-sm text-white/40 leading-relaxed">
+                                                    <span className="w-1 h-1 rounded-full bg-(--primary-color)/40 mt-2 shrink-0" />
+                                                    {desc}
+                                                </li>
+                                            ))}
+                                        </ul>
+
+                                        <div className="flex flex-wrap gap-1.5">
+                                            {exp.technologies.map((tech, key) => (
+                                                <span key={key} className="text-xs text-white/30 bg-white/3 py-1 px-2.5 rounded-md border border-white/4 hover:text-(--primary-color)/60 hover:border-(--primary-color)/20 transition-all duration-300">
+                                                    {tech}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                            </RevealOnScroll>
                         ))}
                     </div>
                 </div>
-            </RevealOnScroll>
+            </div>
         </section>
     );
 }

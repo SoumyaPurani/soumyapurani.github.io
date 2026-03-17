@@ -1,34 +1,48 @@
 import { RxCross2 } from "react-icons/rx";
 
-function MobileMenu({isMenuOpen, setIsMenuOpen}) {
+const menuItems = [
+  { href: '#home', label: 'Home' },
+  { href: '#about', label: 'About' },
+  { href: '#experience', label: 'Experience' },
+  { href: '#education', label: 'Education' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#freelance', label: 'Freelance' },
+  { href: '#contact', label: 'Contact' },
+];
+
+function MobileMenu({ isMenuOpen, setIsMenuOpen }) {
   return (
-    <div className={`fixed w-full top-0 left-0 bg-[rgba(10,10,10,0.95)] z-60 flex flex-col items-center justify-center h-screen transition-all duration-300 gap-15 ease-in-out ${isMenuOpen ? "h-screen opacity-100 pointer-events-auto" : "h-0 opacity-0 pointer-events-none"}`}>
-        <button onClick={() => setIsMenuOpen(false)} 
-        className="absolute top-5 right-7 text-2xl focus:outline-none cursor-pointer text-white hover:text-[var(--primary-color)] transition-colors" 
-        aria-label="Close Menu">
-            <RxCross2 />
-        </button>
-        <a onClick={() => setIsMenuOpen(false)} href="#home" className={`text-2xl font-mono font-semibold text-white my-4 transform transition-transform duration-300 hover:text-[var(--primary-color)] hover:shadow-[0_0_5px_rgba(0,243,255,0.5)] ${isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}>
-          {">"} Home
-        </a>
-        <a onClick={() => setIsMenuOpen(false)} href="#about" className={`text-2xl font-mono font-semibold text-white my-4 transform transition-transform duration-300 hover:text-[var(--primary-color)] hover:shadow-[0_0_5px_rgba(0,243,255,0.5)] ${isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}>
-          {">"} About
-        </a>
-        <a onClick={() => setIsMenuOpen(false)} href="#experience" className={`text-2xl font-mono font-semibold text-white my-4 transform transition-transform duration-300 hover:text-[var(--primary-color)] hover:shadow-[0_0_5px_rgba(0,243,255,0.5)] ${isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}>
-          {">"} Experience
-        </a>
-        <a onClick={() => setIsMenuOpen(false)} href="#education" className={`text-2xl font-mono font-semibold text-white my-4 transform transition-transform duration-300 hover:text-[var(--primary-color)] hover:shadow-[0_0_5px_rgba(0,243,255,0.5)] ${isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}>
-          {">"} Education
-        </a>
-        <a onClick={() => setIsMenuOpen(false)} href="#projects" className={`text-2xl font-mono font-semibold text-white my-4 transform transition-transform duration-300 hover:text-[var(--primary-color)] hover:shadow-[0_0_5px_rgba(0,243,255,0.5)] ${isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}>
-          {">"} Projects
-        </a>
-        <a onClick={() => setIsMenuOpen(false)} href="#freelance" className={`text-2xl font-mono font-semibold text-white my-4 transform transition-transform duration-300 hover:text-[var(--primary-color)] hover:shadow-[0_0_5px_rgba(0,243,255,0.5)] ${isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}>
-          {">"} Freelance
-        </a>
-        <a onClick={() => setIsMenuOpen(false)} href="#contact" className={`text-2xl font-mono font-semibold text-white my-4 transform transition-transform duration-300 hover:text-[var(--primary-color)] hover:shadow-[0_0_5px_rgba(0,243,255,0.5)] ${isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}>
-          {">"} Contact
-        </a>
+    <div className={`fixed inset-0 bg-[var(--bg-color)]/95 backdrop-blur-xl z-60 flex flex-col items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+      <button
+        onClick={() => setIsMenuOpen(false)}
+        className="absolute top-5 right-6 text-2xl cursor-pointer text-white/50 hover:text-white transition-colors duration-300"
+        aria-label="Close Menu"
+      >
+        <RxCross2 />
+      </button>
+
+      <nav className="flex flex-col items-center gap-6">
+        {menuItems.map(({ href, label }, i) => (
+          <a
+            key={href}
+            onClick={() => setIsMenuOpen(false)}
+            href={href}
+            className="group flex items-center gap-3 transition-all duration-500 ease-out"
+            style={{
+              transitionDelay: isMenuOpen ? `${i * 50}ms` : '0ms',
+              opacity: isMenuOpen ? 1 : 0,
+              transform: isMenuOpen ? 'translateY(0)' : 'translateY(16px)',
+            }}
+          >
+            <span className="text-xs font-mono text-[var(--primary-color)]/40 group-hover:text-[var(--primary-color)] transition-colors">
+              0{i + 1}
+            </span>
+            <span className="text-2xl font-display font-semibold text-white/80 group-hover:text-white transition-colors">
+              {label}
+            </span>
+          </a>
+        ))}
+      </nav>
     </div>
   )
 }

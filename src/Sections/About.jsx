@@ -1,23 +1,23 @@
 import { useState, useEffect, useRef } from 'react';
 import RevealOnScroll from '../UI/RevealOnScroll'
 import ParticleField from '../3D/ParticleField'
-import { 
-    DiJavascript1, 
-    DiReact, 
-    DiNodejs, 
-    DiMongodb, 
-    DiPython, 
-    DiGit, 
-    DiJava, 
+import {
+    DiJavascript1,
+    DiReact,
+    DiNodejs,
+    DiMongodb,
+    DiPython,
+    DiGit,
+    DiJava,
     DiHtml5,
     DiCss3
 } from "react-icons/di";
-import { 
-    SiFirebase, 
-    SiNextdotjs, 
-    SiPostgresql, 
-    SiTailwindcss, 
-    SiDocker, 
+import {
+    SiFirebase,
+    SiNextdotjs,
+    SiPostgresql,
+    SiTailwindcss,
+    SiDocker,
     SiAndroidstudio,
     SiJira,
     SiFigma,
@@ -28,7 +28,7 @@ import {
     SiSupabase,
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
-import { 
+import {
     FaGithub,
     FaBootstrap,
     FaPhp,
@@ -40,63 +40,51 @@ const SkillCard = ({ icon, name, activeTooltip, setActiveTooltip, index }) => {
     const isActive = activeTooltip === index;
 
     const handleInteraction = (e) => {
-        if (e.cancelable) {
-            e.preventDefault();
-        }
+        if (e.cancelable) e.preventDefault();
         e.stopPropagation();
-        
-        if (isActive) {
-            setActiveTooltip(null);
-        } else {
-            setActiveTooltip(index);
-        }
+        setActiveTooltip(isActive ? null : index);
     };
 
     const handleMouseEnter = () => {
-        if (window.matchMedia('(hover: hover)').matches) {
-            setActiveTooltip(index);
-        }
+        if (window.matchMedia('(hover: hover)').matches) setActiveTooltip(index);
     };
 
     const handleMouseLeave = () => {
-        if (window.matchMedia('(hover: hover)').matches) {
-            setActiveTooltip(null);
-        }
+        if (window.matchMedia('(hover: hover)').matches) setActiveTooltip(null);
     };
 
     return (
-        <div 
+        <div
             className={`
-                relative w-32 h-32 glass flex items-center justify-center rounded-lg 
-                border border-[rgba(0,229,255,0.1)] hover:border-[var(--primary-color)] 
-                hover:scale-105 transition-all cursor-pointer group 
-                shadow-[0_0_10px_rgba(0,0,0,0.2)] hover:shadow-[0_0_25px_rgba(0,229,255,0.3)]
-                ${isActive ? 'z-50 border-[var(--primary-color)] scale-105' : 'z-10'}
+                relative w-[100px] h-[100px] md:w-[110px] md:h-[110px] glass flex items-center justify-center rounded-xl
+                border transition-all duration-400 cursor-pointer group
+                ${isActive
+                    ? 'z-50 border-[var(--primary-color)]/40 bg-[var(--primary-color)]/[0.04] shadow-[0_0_20px_rgba(0,229,255,0.15)]'
+                    : 'z-10 border-white/[0.04] hover:border-[var(--primary-color)]/30 hover:bg-[var(--primary-color)]/[0.02]'
+                }
             `}
             onClick={handleInteraction}
             onTouchEnd={handleInteraction}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
-            {/* Icon */}
             <div className={`
-                text-5xl transition-colors duration-300
-                ${isActive 
-                    ? 'text-[var(--primary-color)] drop-shadow-[0_0_8px_rgba(0,229,255,0.8)]' 
-                    : 'text-gray-300 group-hover:text-[var(--primary-color)] group-hover:drop-shadow-[0_0_8px_rgba(0,229,255,0.8)]'
+                text-4xl transition-all duration-300
+                ${isActive
+                    ? 'text-[var(--primary-color)] scale-110'
+                    : 'text-white/40 group-hover:text-white/70'
                 }
             `}>
                 {icon}
             </div>
 
             {isActive && (
-                <div className="absolute -top-16 inset-x-0 flex justify-center pointer-events-none">
+                <div className="absolute -top-12 inset-x-0 flex justify-center pointer-events-none animate-fadeIn">
                     <div className="flex flex-col items-center">
-                        <div className="px-4 py-2 rounded-lg bg-[rgba(10,10,20,0.98)] border border-[var(--primary-color)] text-sm font-bold tracking-wide text-[var(--primary-color)] whitespace-nowrap shadow-[0_0_20px_rgba(0,229,255,0.4),inset_0_0_20px_rgba(0,229,255,0.1)]">
+                        <div className="px-3 py-1.5 rounded-lg bg-[var(--bg-surface)] border border-[var(--primary-color)]/30 text-xs font-mono font-medium text-[var(--primary-color)] whitespace-nowrap shadow-[0_0_16px_rgba(0,229,255,0.2)]">
                             {name}
                         </div>
-                        
-                        <div className="w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[8px] border-t-[var(--primary-color)]"></div>
+                        <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-[var(--primary-color)]/30" />
                     </div>
                 </div>
             )}
@@ -159,77 +147,84 @@ function About() {
     }, []);
 
     return (
-        <section id="about" className="min-h-screen py-20 relative overflow-hidden" ref={sectionRef}>
+        <section id="about" className="py-24 relative overflow-hidden" ref={sectionRef}>
             <ParticleField particleCount={150} />
-            <div className="container mx-auto px-6 lg:px-12">
-                
-                {/* About Me Section */}
+            <div className="container mx-auto px-6 lg:px-12 relative z-10">
+
+                {/* About Me */}
                 <RevealOnScroll>
-                    <div className="flex flex-col items-center text-center mb-20 max-w-4xl mx-auto">
-                        <h1 className="text-3xl md:text-5xl font-bold mb-6">
-                            Know Who <span className="text-[var(--primary-color)]">I Am</span>
-                        </h1>
-                        <div className="glass p-8 rounded-xl border border-[rgba(255,255,255,0.05)] w-full">
-                            <p className="text-gray-300 mb-6 text-lg leading-relaxed">
-                                Hi Everyone, I am <span className="text-[var(--primary-color)] font-bold">Soumya Purani</span> currently based in <span className="text-[var(--primary-color)] font-bold">Canada</span>.
+                    <div className="flex flex-col items-center text-center mb-24 max-w-3xl mx-auto">
+                        <p className="font-mono text-xs text-[var(--text-muted)] tracking-widest uppercase mb-4">About</p>
+                        <h2 className="section-heading text-3xl md:text-5xl font-bold mb-8 tracking-tight">
+                            Know Who <span className="text-gradient">I Am</span>
+                        </h2>
+                        <div className="glass p-8 md:p-10 rounded-2xl w-full">
+                            <p className="text-white/50 text-base leading-[1.8]">
+                                Hi Everyone, I am <span className="text-white font-medium">Soumya Purani</span> currently based in <span className="text-white font-medium">Canada</span>.
                                 <br /><br />
                                 I am a Software Engineer at Outlier, a freelance developer and a Computer Science graduate from Dalhousie University.
                                 <br /><br />
                                 Apart from coding, some other activities that I love to do!
                             </p>
-                            <ul className="list-none space-y-2 text-gray-300 inline-block text-left">
-                                <li className="flex items-center gap-2">
-                                    <span className="text-[var(--primary-color)]">➜</span> Playing Chess
-                                </li>
-                                <li className="flex items-center gap-2">
-                                    <span className="text-[var(--primary-color)]">➜</span> Watching Tech Videos
-                                </li>
-                                <li className="flex items-center gap-2">
-                                    <span className="text-[var(--primary-color)]">➜</span> Travelling
-                                </li>
+                            <ul className="mt-6 space-y-2.5 text-white/50 inline-block text-left">
+                                {['Playing Chess', 'Watching Tech Videos', 'Travelling'].map((item) => (
+                                    <li key={item} className="flex items-center gap-3 text-sm">
+                                        <span className="w-1 h-1 rounded-full bg-[var(--primary-color)]" />
+                                        {item}
+                                    </li>
+                                ))}
                             </ul>
                         </div>
                     </div>
                 </RevealOnScroll>
 
+                {/* Skills */}
                 <RevealOnScroll>
-                    <h1 className="text-3xl md:text-4xl font-bold text-center mb-12">
-                        Professional <span className="text-[var(--primary-color)]">Skillset</span>
-                    </h1>
-                    
-                    <div className="flex flex-wrap justify-center gap-8 mb-20 pt-16 pb-8 skill-card-container">
-                        {skills.map((skill, index) => (
-                            <SkillCard 
-                                key={index}
-                                index={`skill-${index}`}
-                                icon={skill.icon} 
-                                name={skill.name}
-                                activeTooltip={activeTooltip}
-                                setActiveTooltip={setActiveTooltip}
-                            />
-                        ))}
+                    <div className="mb-24">
+                        <div className="text-center mb-12">
+                            <p className="font-mono text-xs text-[var(--text-muted)] tracking-widest uppercase mb-3">Skills</p>
+                            <h2 className="section-heading text-2xl md:text-4xl font-bold tracking-tight">
+                                Professional <span className="text-gradient">Skillset</span>
+                            </h2>
+                        </div>
+                        <div className="flex flex-wrap justify-center gap-4 md:gap-5 pt-8 pb-4 skill-card-container max-w-4xl mx-auto">
+                            {skills.map((skill, index) => (
+                                <SkillCard
+                                    key={index}
+                                    index={`skill-${index}`}
+                                    icon={skill.icon}
+                                    name={skill.name}
+                                    activeTooltip={activeTooltip}
+                                    setActiveTooltip={setActiveTooltip}
+                                />
+                            ))}
+                        </div>
                     </div>
                 </RevealOnScroll>
 
+                {/* Tools */}
                 <RevealOnScroll>
-                    <h1 className="text-3xl md:text-4xl font-bold text-center mb-12">
-                        <span className="text-[var(--primary-color)]">Tools</span> I Use
-                    </h1>
-                    
-                    <div className="flex flex-wrap justify-center gap-8 mb-20 pt-16 pb-8 skill-card-container">
-                        {tools.map((tool, index) => (
-                            <SkillCard 
-                                key={index}
-                                index={`tool-${index}`}
-                                icon={tool.icon} 
-                                name={tool.name}
-                                activeTooltip={activeTooltip}
-                                setActiveTooltip={setActiveTooltip}
-                            />
-                        ))}
+                    <div>
+                        <div className="text-center mb-12">
+                            <p className="font-mono text-xs text-[var(--text-muted)] tracking-widest uppercase mb-3">Toolbox</p>
+                            <h2 className="section-heading text-2xl md:text-4xl font-bold tracking-tight">
+                                <span className="text-gradient">Tools</span> I Use
+                            </h2>
+                        </div>
+                        <div className="flex flex-wrap justify-center gap-4 md:gap-5 pt-8 pb-4 skill-card-container max-w-4xl mx-auto">
+                            {tools.map((tool, index) => (
+                                <SkillCard
+                                    key={index}
+                                    index={`tool-${index}`}
+                                    icon={tool.icon}
+                                    name={tool.name}
+                                    activeTooltip={activeTooltip}
+                                    setActiveTooltip={setActiveTooltip}
+                                />
+                            ))}
+                        </div>
                     </div>
                 </RevealOnScroll>
-
             </div>
         </section>
     )

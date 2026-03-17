@@ -1,27 +1,29 @@
-import React, { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
 
+function generateParticleData(count) {
+  const positions = new Float32Array(count * 3)
+  const colors = new Float32Array(count * 3)
+
+  for (let i = 0; i < count; i++) {
+    positions[i * 3] = (Math.random() - 0.5) * 15
+    positions[i * 3 + 1] = (Math.random() - 0.5) * 15
+    positions[i * 3 + 2] = (Math.random() - 0.5) * 8
+
+    const color = Math.random() > 0.5 ? new THREE.Color('#00f3ff') : new THREE.Color('#bc13fe')
+    colors[i * 3] = color.r
+    colors[i * 3 + 1] = color.g
+    colors[i * 3 + 2] = color.b
+  }
+
+  return { positions, colors }
+}
+
 function ParticleSystem({ count = 200 }) {
   const pointsRef = useRef()
-  
-  const particlesPosition = React.useMemo(() => {
-    const positions = new Float32Array(count * 3)
-    const colors = new Float32Array(count * 3)
-    
-    for (let i = 0; i < count; i++) {
-      positions[i * 3] = (Math.random() - 0.5) * 15
-      positions[i * 3 + 1] = (Math.random() - 0.5) * 15
-      positions[i * 3 + 2] = (Math.random() - 0.5) * 8
-      
-      const color = Math.random() > 0.5 ? new THREE.Color('#00f3ff') : new THREE.Color('#bc13fe')
-      colors[i * 3] = color.r
-      colors[i * 3 + 1] = color.g
-      colors[i * 3 + 2] = color.b
-    }
-    
-    return { positions, colors }
-  }, [count])
+
+  const [particlesPosition] = useState(() => generateParticleData(count))
 
   useFrame((state) => {
     const time = state.clock.getElapsedTime()

@@ -8,7 +8,7 @@ import Experience from './Sections/Experience';
 import Education from './Sections/Education';
 import Projects from './Sections/Projects';
 import Freelance from './Sections/Freelance';
-import { Contact } from './Sections/Contact';
+import Contact from './Sections/Contact';
 import RevealOnScroll from './UI/RevealOnScroll';
 import Footer from './Sections/Footer';
 
@@ -24,13 +24,19 @@ function App() {
         <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
         <MobileMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
         <RevealOnScroll>
-        <Home startTyping={isLoaded} />
+          <Home startTyping={isLoaded} />
         </RevealOnScroll>
+        <div className="section-divider" />
         <About />
+        <div className="section-divider" />
         <Experience />
+        <div className="section-divider" />
         <Education />
+        <div className="section-divider" />
         <Projects />
+        <div className="section-divider" />
         <Freelance />
+        <div className="section-divider" />
         <Contact />
         <Footer />
       </div>

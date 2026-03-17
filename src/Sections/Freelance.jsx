@@ -18,51 +18,70 @@ function Freelance() {
     ]);
 
     return (
-        <section id="freelance" className="min-h-screen py-20 relative overflow-hidden">
+        <section id="freelance" className="py-24 relative overflow-hidden">
             <ParticleField particleCount={150} />
-            <RevealOnScroll>
-                <div className="container mx-auto px-6 lg:px-12 z-10 relative">
-                    <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">
-                        My Freelance <span className="text-[var(--primary-color)]">Work</span>
-                        <p className="text-lg text-gray-400 mt-4 font-normal">Here are some projects I've delivered for clients.</p>
-                    </h2>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {freelanceProjects.map((project, index) => (
-                            <ProjectCard3D key={index} index={index}>
-                                <div className="glass h-full rounded-xl overflow-hidden border border-[rgba(0,229,255,0.1)] hover:border-[var(--primary-color)] hover:shadow-[0_0_20px_rgba(0,229,255,0.2)] transition-all flex flex-col justify-between">
-                                    
-                                    <div className="relative overflow-hidden group">
-                                        <img src={project.Image} alt={project.title} className="w-full h-56 object-cover object-center hover:scale-110 transition-transform duration-500" />
-                                    </div>
-
-                                    <div className="p-6 flex flex-col flex-grow">
-                                        <h3 className="text-xl font-bold mb-4 text-center">{project.title}</h3>
-                                        <p className="text-gray-300 mb-6 text-sm text-center leading-relaxed flex-grow">
-                                            {project.description}
-                                        </p>
-                                        
-                                        <div className="flex flex-wrap gap-2 mb-6 justify-center">
-                                            {project.technologies.map((tech, key) => (
-                                                <span key={key} className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all">
-                                                    {tech}
-                                                </span>
-                                            ))}
-                                        </div>
-                                        
-                                        <div className="flex justify-center gap-4 mt-auto">
-                                            <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-[var(--accent-color)] text-white rounded flex items-center gap-2 hover:bg-[var(--secondary-color)] transition-colors text-sm font-bold">
-                                                <FiExternalLink /> Visit Site
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </ProjectCard3D>
-                        ))}
+            <div className="container mx-auto px-6 lg:px-12 z-10 relative">
+                <RevealOnScroll>
+                    <div className="text-center mb-16">
+                        <p className="font-mono text-xs text-[var(--text-muted)] tracking-widest uppercase mb-3">Client Work</p>
+                        <h2 className="section-heading text-3xl md:text-5xl font-bold tracking-tight">
+                            My Freelance <span className="text-gradient">Work</span>
+                        </h2>
+                        <p className="text-sm text-white/30 mt-4 max-w-md mx-auto">Here are some projects I've delivered for clients.</p>
                     </div>
+                </RevealOnScroll>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
+                    {freelanceProjects.map((project, index) => (
+                        <RevealOnScroll key={index} delay={index * 80}>
+                        <ProjectCard3D>
+                            <div className="group glass h-full rounded-2xl overflow-hidden border border-white/[0.04] hover:border-[var(--primary-color)]/20 transition-all duration-500 flex flex-col hover:bg-[var(--primary-color)]/[0.01]">
+
+                                <div className="relative overflow-hidden">
+                                    <div className="aspect-[16/10]">
+                                        <img
+                                            src={project.Image}
+                                            alt={project.title}
+                                            className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                                        />
+                                    </div>
+                                    <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-surface)] via-transparent to-transparent opacity-60" />
+                                </div>
+
+                                <div className="p-5 pt-4 flex flex-col flex-grow">
+                                    <h3 className="text-base font-bold mb-2 tracking-tight text-white/90 group-hover:text-white transition-colors">
+                                        {project.title}
+                                    </h3>
+                                    <p className="text-white/35 mb-5 text-sm leading-relaxed flex-grow min-h-[3rem]">
+                                        {project.description}
+                                    </p>
+
+                                    <div className="flex flex-wrap gap-1.5 mb-5">
+                                        {project.technologies.map((tech, key) => (
+                                            <span key={key} className="bg-white/[0.03] text-white/30 py-1 px-2 rounded-md text-[11px] border border-white/[0.04] hover:text-[var(--primary-color)]/60 hover:border-[var(--primary-color)]/20 transition-all duration-300">
+                                                {tech}
+                                            </span>
+                                        ))}
+                                    </div>
+
+                                    <div className="mt-auto pt-3 border-t border-white/[0.03]">
+                                        <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-white/30 hover:text-[var(--primary-color)] transition-all duration-300 group/link">
+                                            <FiExternalLink className="text-sm" />
+                                            <span className="text-xs font-medium">Visit Site</span>
+                                            <svg className="w-3 h-3 opacity-0 -translate-x-1 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </ProjectCard3D>
+                        </RevealOnScroll>
+                    ))}
                 </div>
-            </RevealOnScroll>
+            </div>
         </section>
     )
 }

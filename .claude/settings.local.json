@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /d/soumyapurani.github.io -maxdepth 1 -name .* -type f)",
+      "Bash(npm list:*)",
+      "Bash(npm run:*)",
+      "Bash(grep:*)"
+    ]
+  }
+}

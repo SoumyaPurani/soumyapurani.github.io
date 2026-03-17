@@ -1,8 +1,10 @@
 import React from 'react'
 
- function Logo() {
+function Logo() {
   return (
-    <a href="#home" className="font-mono text-xl font-bold text">Soumya<span className="bg-gradient-to-r ml-2 from-teal-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent">Purani</span></a>
+    <a href="#home" className="font-display text-lg font-bold tracking-tight text-white hover:opacity-80 transition-opacity">
+      Soumya<span className="text-gradient ml-1">Purani</span>
+    </a>
   )
 }
 

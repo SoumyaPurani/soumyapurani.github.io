@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { Sphere, MeshDistortMaterial, Float } from '@react-three/drei'
 import * as THREE from 'three'
@@ -35,22 +35,23 @@ function ResponsiveMesh() {
   )
 }
 
+function generateParticlePositions(count, width, height) {
+  const positions = new Float32Array(count * 3)
+  for (let i = 0; i < count; i++) {
+    positions[i * 3] = (Math.random() - 0.5) * width
+    positions[i * 3 + 1] = (Math.random() - 0.5) * height
+    positions[i * 3 + 2] = (Math.random() - 0.5) * 10
+  }
+  return positions
+}
+
 function Particles({ count = 100 }) {
   const points = useRef()
   const { viewport } = useThree()
-  
-  const particlesPosition = React.useMemo(() => {
-    const positions = new Float32Array(count * 3)
-    const width = viewport.width * 1.5
-    const height = viewport.height * 1.5
-    
-    for (let i = 0; i < count; i++) {
-      positions[i * 3] = (Math.random() - 0.5) * width
-      positions[i * 3 + 1] = (Math.random() - 0.5) * height
-      positions[i * 3 + 2] = (Math.random() - 0.5) * 10
-    }
-    return positions
-  }, [count, viewport])
+
+  const [particlesPosition] = useState(
+    () => generateParticlePositions(count, viewport.width * 1.5, viewport.height * 1.5)
+  )
 
   useFrame((state) => {
     const time = state.clock.getElapsedTime()
