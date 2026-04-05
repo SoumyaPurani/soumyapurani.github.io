@@ -8,7 +8,7 @@ function Footer() {
             <div className="flex justify-center gap-6 mb-6">
                 <a
                     href="https://www.linkedin.com/in/soumyapurani/"
-                    className="text-white/20 hover:text-[var(--primary-color)] transition-all duration-300 text-xl hover:-translate-y-0.5"
+                    className="text-white/20 hover:text-(--primary-color) transition-all duration-300 text-xl hover:-translate-y-0.5"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="LinkedIn"
@@ -17,7 +17,7 @@ function Footer() {
                 </a>
                 <a
                     href="https://github.com/SoumyaPurani"
-                    className="text-white/20 hover:text-[var(--primary-color)] transition-all duration-300 text-xl hover:-translate-y-0.5"
+                    className="text-white/20 hover:text-(--primary-color) transition-all duration-300 text-xl hover:-translate-y-0.5"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="GitHub"
