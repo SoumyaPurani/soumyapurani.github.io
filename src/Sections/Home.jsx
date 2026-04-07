@@ -6,7 +6,7 @@ import ParticleField from '../3D/ParticleField';
 
 function Home({ startTyping }) {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 pb-16 md:pb-0">
         <ParticleField particleCount={150} />
 
         {/* Ambient glow */}

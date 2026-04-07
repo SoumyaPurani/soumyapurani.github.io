@@ -34,7 +34,7 @@ function Education() {
 
                 <div className="max-w-3xl mx-auto relative">
                     {/* Timeline line */}
-                    <div className="absolute left-[19px] md:left-1/2 -translate-x-1/2 h-full w-px bg-gradient-to-b from-[var(--primary-color)]/20 via-[var(--primary-color)]/10 to-transparent" />
+                    <div className="absolute left-[15px] md:left-1/2 -translate-x-1/2 h-full w-px bg-gradient-to-b from-[var(--primary-color)]/20 via-[var(--primary-color)]/10 to-transparent" />
 
                     <div className="space-y-10">
                         {education.map((edu, index) => (
