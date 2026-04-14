@@ -162,7 +162,7 @@ function About() {
                             <p className="text-white/50 text-base leading-[1.8]">
                                 Hi Everyone, I am <span className="text-white font-medium">Soumya Purani</span> currently based in <span className="text-white font-medium">Canada</span>.
                                 <br /><br />
-                                I am a Software Engineer at Outlier, a freelance developer and a Computer Science graduate from Dalhousie University.
+                                I am a Tier 2 Application Support Engineer at Symcor, a freelance developer and a Computer Science graduate from Dalhousie University.
                                 <br /><br />
                                 Apart from coding, some other activities that I love to do!
                             </p>
