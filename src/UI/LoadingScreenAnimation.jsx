@@ -87,10 +87,11 @@ function LoadingScreenAnimation({ onComplete }) {
       const snippet = codeSnippets[snipSnipIdx];
       const typingDone = snipSnipIdx >= codeSnippets.length - 1 && charIdx >= snippet.length;
 
-      if (charIdx >= snippet.length) {
-        if (pauseRemaining > 0) {
-          pauseRemaining--;
-        } else if (snipSnipIdx < codeSnippets.length - 1) {
+      // Handle pause between snippets BEFORE checking if done / typing
+      if (pauseRemaining > 0) {
+        pauseRemaining--;
+      } else if (charIdx >= snippet.length) {
+        if (snipSnipIdx < codeSnippets.length - 1) {
           snipSnipIdx++;
           charIdx = 0;
           textState = '';
@@ -106,7 +107,7 @@ function LoadingScreenAnimation({ onComplete }) {
       if (progressDone && typingDone) {
         clearInterval(interval);
         setTimeout(() => setFading(true), 300);
-        setTimeout(onComplete, 800);
+        setTimeout(() => onComplete?.(), 800);
       }
     }, 100);
 
