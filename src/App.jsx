@@ -1,42 +1,31 @@
 import React from 'react'
 import Navbar from './UI/Navbar'
 import MobileMenu from './UI/MobileMenu'
-import LoadingScreenAnimation from './UI/LoadingScreenAnimation';
+import LoadingScreenAnimation from './UI/LoadingScreenAnimation'
 import Home from './Sections/Home'
-import About from './Sections/About';
-import Experience from './Sections/Experience';
-import Education from './Sections/Education';
-import Projects from './Sections/Projects';
-import Freelance from './Sections/Freelance';
-import Contact from './Sections/Contact';
-import RevealOnScroll from './UI/RevealOnScroll';
-import Footer from './Sections/Footer';
+import About from './Sections/About'
+import Experience from './Sections/Experience'
+import Projects from './Sections/Projects'
+import Education from './Sections/Education'
+import Contact from './Sections/Contact'
+import Footer from './Sections/Footer'
 
 function App() {
-  const [isLoaded, setIsLoaded] = React.useState(false);
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isLoaded, setIsLoaded] = React.useState(false)
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false)
   return (
     <>
       {!isLoaded && (
         <LoadingScreenAnimation onComplete={() => setIsLoaded(true)} />
       )}
       <div className={`transition-opacity duration-700 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
-        <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
-        <MobileMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
-        <RevealOnScroll>
-          <Home startTyping={isLoaded} />
-        </RevealOnScroll>
-        <div className="section-divider" />
+        <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+        <MobileMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+        <Home startTyping={isLoaded} />
         <About />
-        <div className="section-divider" />
         <Experience />
-        <div className="section-divider" />
         <Education />
-        <div className="section-divider" />
         <Projects />
-        <div className="section-divider" />
-        <Freelance />
-        <div className="section-divider" />
         <Contact />
         <Footer />
       </div>

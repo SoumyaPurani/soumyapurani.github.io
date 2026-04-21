@@ -1,0 +1,643 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "eslint.config.js",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\eslint.config.js",
+      "source_location": "L1",
+      "id": "d_soumyapurani_github_io_eslint_config_js",
+      "community": 16,
+      "norm_label": "eslint.config.js"
+    },
+    {
+      "label": "vite.config.js",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\vite.config.js",
+      "source_location": "L1",
+      "id": "d_soumyapurani_github_io_vite_config_js",
+      "community": 17,
+      "norm_label": "vite.config.js"
+    },
+    {
+      "label": "App.jsx",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\App.jsx",
+      "source_location": "L1",
+      "id": "d_soumyapurani_github_io_src_app_jsx",
+      "community": 3,
+      "norm_label": "app.jsx"
+    },
+    {
+      "label": "App()",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\App.jsx",
+      "source_location": "L12",
+      "id": "app_app",
+      "community": 3,
+      "norm_label": "app()"
+    },
+    {
+      "label": "main.jsx",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\main.jsx",
+      "source_location": "L1",
+      "id": "d_soumyapurani_github_io_src_main_jsx",
+      "community": 18,
+      "norm_label": "main.jsx"
+    },
+    {
+      "label": "HeroBackground3D.jsx",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\3D\\HeroBackground3D.jsx",
+      "source_location": "L1",
+      "id": "d_soumyapurani_github_io_src_3d_herobackground3d_jsx",
+      "community": 0,
+      "norm_label": "herobackground3d.jsx"
+    },
+    {
+      "label": "ResponsiveMesh()",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\3D\\HeroBackground3D.jsx",
+      "source_location": "L6",
+      "id": "herobackground3d_responsivemesh",
+      "community": 0,
+      "norm_label": "responsivemesh()"
+    },
+    {
+      "label": "generateParticlePositions()",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\3D\\HeroBackground3D.jsx",
+      "source_location": "L38",
+      "id": "herobackground3d_generateparticlepositions",
+      "community": 0,
+      "norm_label": "generateparticlepositions()"
+    },
+    {
+      "label": "Particles()",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\3D\\HeroBackground3D.jsx",
+      "source_location": "L48",
+      "id": "herobackground3d_particles",
+      "community": 0,
+      "norm_label": "particles()"
+    },
+    {
+      "label": "HeroBackground3D()",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\3D\\HeroBackground3D.jsx",
+      "source_location": "L86",
+      "id": "herobackground3d_herobackground3d",
+      "community": 0,
+      "norm_label": "herobackground3d()"
+    },
+    {
+      "label": "ParticleField.jsx",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\3D\\ParticleField.jsx",
+      "source_location": "L1",
+      "id": "d_soumyapurani_github_io_src_3d_particlefield_jsx",
+      "community": 1,
+      "norm_label": "particlefield.jsx"
+    },
+    {
+      "label": "generateParticleData()",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\3D\\ParticleField.jsx",
+      "source_location": "L5",
+      "id": "particlefield_generateparticledata",
+      "community": 1,
+      "norm_label": "generateparticledata()"
+    },
+    {
+      "label": "ParticleSystem()",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\3D\\ParticleField.jsx",
+      "source_location": "L23",
+      "id": "particlefield_particlesystem",
+      "community": 1,
+      "norm_label": "particlesystem()"
+    },
+    {
+      "label": "ParticleField()",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\3D\\ParticleField.jsx",
+      "source_location": "L73",
+      "id": "particlefield_particlefield",
+      "community": 1,
+      "norm_label": "particlefield()"
+    },
+    {
+      "label": "ProjectCard3D.jsx",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\3D\\ProjectCard3D.jsx",
+      "source_location": "L1",
+      "id": "d_soumyapurani_github_io_src_3d_projectcard3d_jsx",
+      "community": 4,
+      "norm_label": "projectcard3d.jsx"
+    },
+    {
+      "label": "ProjectCard3D()",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\3D\\ProjectCard3D.jsx",
+      "source_location": "L3",
+      "id": "projectcard3d_projectcard3d",
+      "community": 4,
+      "norm_label": "projectcard3d()"
+    },
+    {
+      "label": "About.jsx",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\Sections\\About.jsx",
+      "source_location": "L1",
+      "id": "d_soumyapurani_github_io_src_sections_about_jsx",
+      "community": 5,
+      "norm_label": "about.jsx"
+    },
+    {
+      "label": "About()",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\Sections\\About.jsx",
+      "source_location": "L8",
+      "id": "about_about",
+      "community": 5,
+      "norm_label": "about()"
+    },
+    {
+      "label": "Contact.jsx",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\Sections\\Contact.jsx",
+      "source_location": "L1",
+      "id": "d_soumyapurani_github_io_src_sections_contact_jsx",
+      "community": 6,
+      "norm_label": "contact.jsx"
+    },
+    {
+      "label": "Contact()",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\Sections\\Contact.jsx",
+      "source_location": "L4",
+      "id": "contact_contact",
+      "community": 6,
+      "norm_label": "contact()"
+    },
+    {
+      "label": "Experience.jsx",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\Sections\\Experience.jsx",
+      "source_location": "L1",
+      "id": "d_soumyapurani_github_io_src_sections_experience_jsx",
+      "community": 7,
+      "norm_label": "experience.jsx"
+    },
+    {
+      "label": "Experience()",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\Sections\\Experience.jsx",
+      "source_location": "L4",
+      "id": "experience_experience",
+      "community": 7,
+      "norm_label": "experience()"
+    },
+    {
+      "label": "Footer.jsx",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\Sections\\Footer.jsx",
+      "source_location": "L1",
+      "id": "d_soumyapurani_github_io_src_sections_footer_jsx",
+      "community": 8,
+      "norm_label": "footer.jsx"
+    },
+    {
+      "label": "Footer()",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\Sections\\Footer.jsx",
+      "source_location": "L4",
+      "id": "footer_footer",
+      "community": 8,
+      "norm_label": "footer()"
+    },
+    {
+      "label": "Home.jsx",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\Sections\\Home.jsx",
+      "source_location": "L1",
+      "id": "d_soumyapurani_github_io_src_sections_home_jsx",
+      "community": 9,
+      "norm_label": "home.jsx"
+    },
+    {
+      "label": "Home()",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\Sections\\Home.jsx",
+      "source_location": "L8",
+      "id": "home_home",
+      "community": 9,
+      "norm_label": "home()"
+    },
+    {
+      "label": "Projects.jsx",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\Sections\\Projects.jsx",
+      "source_location": "L1",
+      "id": "d_soumyapurani_github_io_src_sections_projects_jsx",
+      "community": 10,
+      "norm_label": "projects.jsx"
+    },
+    {
+      "label": "Projects()",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\Sections\\Projects.jsx",
+      "source_location": "L78",
+      "id": "projects_projects",
+      "community": 10,
+      "norm_label": "projects()"
+    },
+    {
+      "label": "LoadingScreenAnimation.jsx",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\UI\\LoadingScreenAnimation.jsx",
+      "source_location": "L1",
+      "id": "d_soumyapurani_github_io_src_ui_loadingscreenanimation_jsx",
+      "community": 2,
+      "norm_label": "loadingscreenanimation.jsx"
+    },
+    {
+      "label": "SpinningShape()",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\UI\\LoadingScreenAnimation.jsx",
+      "source_location": "L5",
+      "id": "loadingscreenanimation_spinningshape",
+      "community": 2,
+      "norm_label": "spinningshape()"
+    },
+    {
+      "label": "LoadingScreenAnimation()",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\UI\\LoadingScreenAnimation.jsx",
+      "source_location": "L58",
+      "id": "loadingscreenanimation_loadingscreenanimation",
+      "community": 2,
+      "norm_label": "loadingscreenanimation()"
+    },
+    {
+      "label": "Logo.jsx",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\UI\\Logo.jsx",
+      "source_location": "L1",
+      "id": "d_soumyapurani_github_io_src_ui_logo_jsx",
+      "community": 11,
+      "norm_label": "logo.jsx"
+    },
+    {
+      "label": "Logo()",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\UI\\Logo.jsx",
+      "source_location": "L3",
+      "id": "logo_logo",
+      "community": 11,
+      "norm_label": "logo()"
+    },
+    {
+      "label": "MobileMenu.jsx",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\UI\\MobileMenu.jsx",
+      "source_location": "L1",
+      "id": "d_soumyapurani_github_io_src_ui_mobilemenu_jsx",
+      "community": 12,
+      "norm_label": "mobilemenu.jsx"
+    },
+    {
+      "label": "MobileMenu()",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\UI\\MobileMenu.jsx",
+      "source_location": "L11",
+      "id": "mobilemenu_mobilemenu",
+      "community": 12,
+      "norm_label": "mobilemenu()"
+    },
+    {
+      "label": "Navbar.jsx",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\UI\\Navbar.jsx",
+      "source_location": "L1",
+      "id": "d_soumyapurani_github_io_src_ui_navbar_jsx",
+      "community": 13,
+      "norm_label": "navbar.jsx"
+    },
+    {
+      "label": "Navbar()",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\UI\\Navbar.jsx",
+      "source_location": "L13",
+      "id": "navbar_navbar",
+      "community": 13,
+      "norm_label": "navbar()"
+    },
+    {
+      "label": "RevealOnScroll.jsx",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\UI\\RevealOnScroll.jsx",
+      "source_location": "L1",
+      "id": "d_soumyapurani_github_io_src_ui_revealonscroll_jsx",
+      "community": 14,
+      "norm_label": "revealonscroll.jsx"
+    },
+    {
+      "label": "RevealOnScroll()",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\UI\\RevealOnScroll.jsx",
+      "source_location": "L3",
+      "id": "revealonscroll_revealonscroll",
+      "community": 14,
+      "norm_label": "revealonscroll()"
+    },
+    {
+      "label": "TypingEffect.jsx",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\UI\\TypingEffect.jsx",
+      "source_location": "L1",
+      "id": "d_soumyapurani_github_io_src_ui_typingeffect_jsx",
+      "community": 15,
+      "norm_label": "typingeffect.jsx"
+    },
+    {
+      "label": "TypingEffect()",
+      "file_type": "code",
+      "source_file": "D:\\soumyapurani.github.io\\src\\UI\\TypingEffect.jsx",
+      "source_location": "L3",
+      "id": "typingeffect_typingeffect",
+      "community": 15,
+      "norm_label": "typingeffect()"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\soumyapurani.github.io\\src\\App.jsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_src": "d_soumyapurani_github_io_src_app_jsx",
+      "_tgt": "app_app",
+      "source": "d_soumyapurani_github_io_src_app_jsx",
+      "target": "app_app",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\soumyapurani.github.io\\src\\3D\\HeroBackground3D.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_src": "d_soumyapurani_github_io_src_3d_herobackground3d_jsx",
+      "_tgt": "herobackground3d_responsivemesh",
+      "source": "d_soumyapurani_github_io_src_3d_herobackground3d_jsx",
+      "target": "herobackground3d_responsivemesh",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\soumyapurani.github.io\\src\\3D\\HeroBackground3D.jsx",
+      "source_location": "L38",
+      "weight": 1.0,
+      "_src": "d_soumyapurani_github_io_src_3d_herobackground3d_jsx",
+      "_tgt": "herobackground3d_generateparticlepositions",
+      "source": "d_soumyapurani_github_io_src_3d_herobackground3d_jsx",
+      "target": "herobackground3d_generateparticlepositions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\soumyapurani.github.io\\src\\3D\\HeroBackground3D.jsx",
+      "source_location": "L48",
+      "weight": 1.0,
+      "_src": "d_soumyapurani_github_io_src_3d_herobackground3d_jsx",
+      "_tgt": "herobackground3d_particles",
+      "source": "d_soumyapurani_github_io_src_3d_herobackground3d_jsx",
+      "target": "herobackground3d_particles",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\soumyapurani.github.io\\src\\3D\\HeroBackground3D.jsx",
+      "source_location": "L86",
+      "weight": 1.0,
+      "_src": "d_soumyapurani_github_io_src_3d_herobackground3d_jsx",
+      "_tgt": "herobackground3d_herobackground3d",
+      "source": "d_soumyapurani_github_io_src_3d_herobackground3d_jsx",
+      "target": "herobackground3d_herobackground3d",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\soumyapurani.github.io\\src\\3D\\ParticleField.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_src": "d_soumyapurani_github_io_src_3d_particlefield_jsx",
+      "_tgt": "particlefield_generateparticledata",
+      "source": "d_soumyapurani_github_io_src_3d_particlefield_jsx",
+      "target": "particlefield_generateparticledata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\soumyapurani.github.io\\src\\3D\\ParticleField.jsx",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_src": "d_soumyapurani_github_io_src_3d_particlefield_jsx",
+      "_tgt": "particlefield_particlesystem",
+      "source": "d_soumyapurani_github_io_src_3d_particlefield_jsx",
+      "target": "particlefield_particlesystem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\soumyapurani.github.io\\src\\3D\\ParticleField.jsx",
+      "source_location": "L73",
+      "weight": 1.0,
+      "_src": "d_soumyapurani_github_io_src_3d_particlefield_jsx",
+      "_tgt": "particlefield_particlefield",
+      "source": "d_soumyapurani_github_io_src_3d_particlefield_jsx",
+      "target": "particlefield_particlefield",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\soumyapurani.github.io\\src\\3D\\ProjectCard3D.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "d_soumyapurani_github_io_src_3d_projectcard3d_jsx",
+      "_tgt": "projectcard3d_projectcard3d",
+      "source": "d_soumyapurani_github_io_src_3d_projectcard3d_jsx",
+      "target": "projectcard3d_projectcard3d",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\soumyapurani.github.io\\src\\Sections\\About.jsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_src": "d_soumyapurani_github_io_src_sections_about_jsx",
+      "_tgt": "about_about",
+      "source": "d_soumyapurani_github_io_src_sections_about_jsx",
+      "target": "about_about",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\soumyapurani.github.io\\src\\Sections\\Contact.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_src": "d_soumyapurani_github_io_src_sections_contact_jsx",
+      "_tgt": "contact_contact",
+      "source": "d_soumyapurani_github_io_src_sections_contact_jsx",
+      "target": "contact_contact",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\soumyapurani.github.io\\src\\Sections\\Experience.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_src": "d_soumyapurani_github_io_src_sections_experience_jsx",
+      "_tgt": "experience_experience",
+      "source": "d_soumyapurani_github_io_src_sections_experience_jsx",
+      "target": "experience_experience",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\soumyapurani.github.io\\src\\Sections\\Footer.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_src": "d_soumyapurani_github_io_src_sections_footer_jsx",
+      "_tgt": "footer_footer",
+      "source": "d_soumyapurani_github_io_src_sections_footer_jsx",
+      "target": "footer_footer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\soumyapurani.github.io\\src\\Sections\\Home.jsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_src": "d_soumyapurani_github_io_src_sections_home_jsx",
+      "_tgt": "home_home",
+      "source": "d_soumyapurani_github_io_src_sections_home_jsx",
+      "target": "home_home",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\soumyapurani.github.io\\src\\Sections\\Projects.jsx",
+      "source_location": "L78",
+      "weight": 1.0,
+      "_src": "d_soumyapurani_github_io_src_sections_projects_jsx",
+      "_tgt": "projects_projects",
+      "source": "d_soumyapurani_github_io_src_sections_projects_jsx",
+      "target": "projects_projects",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\soumyapurani.github.io\\src\\UI\\LoadingScreenAnimation.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_src": "d_soumyapurani_github_io_src_ui_loadingscreenanimation_jsx",
+      "_tgt": "loadingscreenanimation_spinningshape",
+      "source": "d_soumyapurani_github_io_src_ui_loadingscreenanimation_jsx",
+      "target": "loadingscreenanimation_spinningshape",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\soumyapurani.github.io\\src\\UI\\LoadingScreenAnimation.jsx",
+      "source_location": "L58",
+      "weight": 1.0,
+      "_src": "d_soumyapurani_github_io_src_ui_loadingscreenanimation_jsx",
+      "_tgt": "loadingscreenanimation_loadingscreenanimation",
+      "source": "d_soumyapurani_github_io_src_ui_loadingscreenanimation_jsx",
+      "target": "loadingscreenanimation_loadingscreenanimation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\soumyapurani.github.io\\src\\UI\\Logo.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "d_soumyapurani_github_io_src_ui_logo_jsx",
+      "_tgt": "logo_logo",
+      "source": "d_soumyapurani_github_io_src_ui_logo_jsx",
+      "target": "logo_logo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\soumyapurani.github.io\\src\\UI\\MobileMenu.jsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_src": "d_soumyapurani_github_io_src_ui_mobilemenu_jsx",
+      "_tgt": "mobilemenu_mobilemenu",
+      "source": "d_soumyapurani_github_io_src_ui_mobilemenu_jsx",
+      "target": "mobilemenu_mobilemenu",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\soumyapurani.github.io\\src\\UI\\Navbar.jsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_src": "d_soumyapurani_github_io_src_ui_navbar_jsx",
+      "_tgt": "navbar_navbar",
+      "source": "d_soumyapurani_github_io_src_ui_navbar_jsx",
+      "target": "navbar_navbar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\soumyapurani.github.io\\src\\UI\\RevealOnScroll.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "d_soumyapurani_github_io_src_ui_revealonscroll_jsx",
+      "_tgt": "revealonscroll_revealonscroll",
+      "source": "d_soumyapurani_github_io_src_ui_revealonscroll_jsx",
+      "target": "revealonscroll_revealonscroll",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\soumyapurani.github.io\\src\\UI\\TypingEffect.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "d_soumyapurani_github_io_src_ui_typingeffect_jsx",
+      "_tgt": "typingeffect_typingeffect",
+      "source": "d_soumyapurani_github_io_src_ui_typingeffect_jsx",
+      "target": "typingeffect_typingeffect",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": []
+}

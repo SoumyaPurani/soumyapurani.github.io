@@ -1,233 +1,177 @@
-import { useState, useEffect, useRef } from 'react';
-import RevealOnScroll from '../UI/RevealOnScroll'
-import ParticleField from '../3D/ParticleField'
-import {
-    DiJavascript1,
-    DiReact,
-    DiNodejs,
-    DiMongodb,
-    DiPython,
-    DiGit,
-    DiJava,
-    DiHtml5,
-    DiCss3
-} from "react-icons/di";
-import {
-    SiFirebase,
-    SiNextdotjs,
-    SiPostgresql,
-    SiTailwindcss,
-    SiDocker,
-    SiAndroidstudio,
-    SiJira,
-    SiFigma,
-    SiSpring,
-    SiPostman,
-    SiMariadbfoundation,
-    SiGnubash,
-    SiSupabase,
-} from "react-icons/si";
+import RevealOnScroll from '../UI/RevealOnScroll';
+import { DiJavascript1, DiReact, DiNodejs, DiPython, DiJava } from "react-icons/di";
+import { SiNextdotjs, SiSpring, SiTailwindcss, SiMongodb, SiGit, SiDocker, SiPostgresql, SiFirebase, SiGithub, SiPostman, SiFigma, SiJira, SiSupabase } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
-import {
-    FaGithub,
-    FaBootstrap,
-    FaPhp,
-    FaConfluence,
-    FaAws,
-} from "react-icons/fa";
-
-const SkillCard = ({ icon, name, activeTooltip, setActiveTooltip, index }) => {
-    const isActive = activeTooltip === index;
-
-    const handleInteraction = (e) => {
-        if (e.cancelable) e.preventDefault();
-        e.stopPropagation();
-        setActiveTooltip(isActive ? null : index);
-    };
-
-    const handleMouseEnter = () => {
-        if (window.matchMedia('(hover: hover)').matches) setActiveTooltip(index);
-    };
-
-    const handleMouseLeave = () => {
-        if (window.matchMedia('(hover: hover)').matches) setActiveTooltip(null);
-    };
-
-    return (
-        <div
-            className={`
-                relative w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-[110px] md:h-[110px] glass flex items-center justify-center rounded-xl
-                border transition-all duration-400 cursor-pointer group
-                ${isActive
-                    ? 'z-50 border-(--primary-color)/40 bg-(--primary-color)/4 shadow-[0_0_20px_rgba(0,229,255,0.15)]'
-                    : 'z-10 border-white/4 hover:border-(--primary-color)/30 hover:bg-(--primary-color)/2'
-                }
-            `}
-            onClick={handleInteraction}
-            onTouchEnd={handleInteraction}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-        >
-            <div className={`
-                text-3xl sm:text-4xl transition-all duration-300
-                ${isActive
-                    ? 'text-(--primary-color) scale-110'
-                    : 'text-white/40 group-hover:text-white/70'
-                }
-            `}>
-                {icon}
-            </div>
-
-            {isActive && (
-                <div className="absolute -top-12 inset-x-0 flex justify-center pointer-events-none animate-fadeIn">
-                    <div className="flex flex-col items-center">
-                        <div className="px-3 py-1.5 rounded-lg bg-(--bg-surface) border border-(--primary-color)/30 text-xs font-mono font-medium text-(--primary-color) whitespace-nowrap shadow-[0_0_16px_rgba(0,229,255,0.2)]">
-                            {name}
-                        </div>
-                        <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-(--primary-color)/30" />
-                    </div>
-                </div>
-            )}
-        </div>
-    );
-};
+import { FaAws } from "react-icons/fa";
 
 function About() {
-    const [activeTooltip, setActiveTooltip] = useState(null);
-    const sectionRef = useRef(null);
+  const stats = [
+    { value: "4+", label: "Years Experience" },
+    { value: "10+", label: "Projects Delivered" },
+    { value: "3", label: "Roles Held" },
+  ];
 
-    const skills = [
-        { icon: <DiJavascript1 />, name: "JavaScript" },
-        { icon: <DiReact />, name: "React" },
-        { icon: <DiNodejs />, name: "Node.js" },
-        { icon: <DiMongodb />, name: "MongoDB" },
-        { icon: <SiNextdotjs />, name: "Next.js" },
-        { icon: <DiGit />, name: "Git" },
-        { icon: <SiFirebase />, name: "Firebase" },
-        { icon: <DiPython />, name: "Python" },
-        { icon: <DiJava />, name: "Java" },
-        { icon: <SiTailwindcss />, name: "Tailwind CSS" },
-        { icon: <DiHtml5 />, name: "HTML5" },
-        { icon: <DiCss3 />, name: "CSS3" },
-        { icon: <SiSpring />, name: "Spring Boot" },
-        { icon: <FaBootstrap />, name: "Bootstrap" },
-        { icon: <FaPhp />, name: "PHP" },
-        { icon: <SiMariadbfoundation />, name: "MariaDB" },
-        { icon: <SiGnubash />, name: "Bash" },
-    ];
+  return (
+    <section id="about" className="py-24 md:py-32 relative overflow-hidden">
+      <div className="absolute top-0 left-1/2 w-[600px] h-[600px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(232,255,71,0.04) 0%, transparent 70%)' }} />
 
-    const tools = [
-        { icon: <VscVscode />, name: "VS Code" },
-        { icon: <SiDocker />, name: "Docker" },
-        { icon: <SiPostgresql />, name: "PostgreSQL" },
-        { icon: <SiAndroidstudio />, name: "Android Studio" },
-        { icon: <SiJira />, name: "Jira" },
-        { icon: <FaConfluence />, name: "Confluence" },
-        { icon: <SiFigma />, name: "Figma" },
-        { icon: <FaGithub />, name: "GitHub" },
-        { icon: <SiPostman />, name: "Postman" },
-        { icon: <SiSupabase />, name: "Supabase" },
-        { icon: <FaAws />, name: "AWS" },
-    ];
+      <div className="container mx-auto px-6 lg:px-12 relative z-10">
+        <RevealOnScroll>
+          <div className="mb-16">
+            <p className="font-mono text-xs text-(--text-muted) tracking-[0.2em] uppercase mb-3">About</p>
+            <h2 className="section-heading text-3xl md:text-5xl font-bold tracking-tight">
+              Know Who <span className="text-gradient">I Am</span>
+            </h2>
+          </div>
+        </RevealOnScroll>
 
-    useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (!event.target.closest('.skill-card-container')) {
-                setActiveTooltip(null);
-            }
-        };
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 max-w-6xl mx-auto">
+          <RevealOnScroll>
+            <div className="space-y-8">
+              <div className="space-y-6">
+                <p className="text-(--text-dim) text-base leading-[1.8]">
+                  Hi, I'm <span className="text-(--text-color) font-medium">Soumya Purani</span> — currently based in Canada.
+                  I'm a Tier 2 Application Support Engineer at Symcor, a freelance developer,
+                  and a Computer Science graduate from Dalhousie University.
+                </p>
+                <p className="text-(--text-dim) text-base leading-[1.8]">
+                  I build secure, interactive, and scalable software. I love solving complex
+                  problems, optimizing performance, and shipping things that work reliably
+                  under pressure.
+                </p>
+              </div>
 
-        document.addEventListener('click', handleClickOutside);
-        document.addEventListener('touchstart', handleClickOutside);
+              <div className="space-y-8">
+                <div>
+                  <h3 className="font-mono text-xs text-(--text-muted) tracking-[0.2em] uppercase mb-5">Core Skills</h3>
+                  <div className="flex flex-wrap gap-3">
+                    {[
+                      { name: "JavaScript", icon: <DiJavascript1 className="text-lg" /> },
+                      { name: "React", icon: <DiReact className="text-lg" /> },
+                      { name: "Node.js", icon: <DiNodejs className="text-lg" /> },
+                      { name: "Python", icon: <DiPython className="text-lg" /> },
+                      { name: "Java", icon: <DiJava className="text-lg" /> },
+                      { name: "Next.js", icon: <SiNextdotjs className="text-lg" /> },
+                      { name: "Spring Boot", icon: <SiSpring className="text-lg" /> },
+                      { name: "Tailwind CSS", icon: <SiTailwindcss className="text-lg" /> },
+                      { name: "MongoDB", icon: <SiMongodb className="text-lg" /> },
+                      { name: "Git", icon: <SiGit className="text-lg" /> },
+                    ].map((skill) => (
+                      <div
+                        key={skill.name}
+                        className="flex items-center cursor-pointer gap-2 px-4 py-2.5 bg-(--bg-surface) border border-(--border-subtle) rounded-lg hover:border-(--primary-color)/30 hover:bg-(--primary-color)/2 transition-all duration-300"
+                      >
+                        <span className="text-(--text-color)/50 group-hover:text-(--primary-color) transition-colors">
+                          {skill.icon}
+                        </span>
+                        <span className="text-sm text-(--text-color)/80 font-medium">{skill.name}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
 
-        return () => {
-            document.removeEventListener('click', handleClickOutside);
-            document.removeEventListener('touchstart', handleClickOutside);
-        };
-    }, []);
+                <div>
+                  <h3 className="font-mono text-xs text-(--text-muted) tracking-[0.2em] uppercase mb-5">Tools</h3>
+                  <div className="flex flex-wrap gap-3">
+                    {[
+                      { name: "VS Code", icon: <VscVscode className="text-lg" /> },
+                      { name: "Docker", icon: <SiDocker className="text-lg" /> },
+                      { name: "PostgreSQL", icon: <SiPostgresql className="text-lg" /> },
+                      { name: "Firebase", icon: <SiFirebase className="text-lg" /> },
+                      { name: "AWS", icon: <FaAws className="text-lg" /> },
+                      { name: "GitHub", icon: <SiGithub className="text-lg" /> },
+                      { name: "Postman", icon: <SiPostman className="text-lg" /> },
+                      { name: "Figma", icon: <SiFigma className="text-lg" /> },
+                      { name: "Jira", icon: <SiJira className="text-lg" /> },
+                      { name: "Supabase", icon: <SiSupabase className="text-lg" /> },
+                    ].map((tool) => (
+                      <div
+                        key={tool.name}
+                        className="flex cursor-pointer items-center gap-2 px-4 py-2.5 bg-(--bg-surface) border border-(--border-subtle) rounded-lg hover:border-(--primary-color)/30 hover:bg-(--primary-color)/2 transition-all duration-300"
+                      >
+                        <span className="text-(--text-color)/50 group-hover:text-(--primary-color) transition-colors">
+                          {tool.icon}
+                        </span>
+                        <span className="text-sm text-(--text-color)/80 font-medium">{tool.name}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
 
-    return (
-        <section id="about" className="py-24 relative overflow-hidden" ref={sectionRef}>
-            <ParticleField particleCount={150} />
-            <div className="container mx-auto px-6 lg:px-12 relative z-10">
-
-                {/* About Me */}
-                <RevealOnScroll>
-                    <div className="flex flex-col items-center text-center mb-24 max-w-3xl mx-auto">
-                        <p className="font-mono text-xs text-(--text-muted) tracking-widest uppercase mb-4">About</p>
-                        <h2 className="section-heading text-3xl md:text-5xl font-bold mb-8 tracking-tight">
-                            Know Who <span className="text-gradient">I Am</span>
-                        </h2>
-                        <div className="glass p-8 md:p-10 rounded-2xl w-full">
-                            <p className="text-white/50 text-base leading-[1.8]">
-                                Hi Everyone, I am <span className="text-white font-medium">Soumya Purani</span> currently based in <span className="text-white font-medium">Canada</span>.
-                                <br /><br />
-                                I am a Tier 2 Application Support Engineer at Symcor, a freelance developer and a Computer Science graduate from Dalhousie University.
-                                <br /><br />
-                                Apart from coding, some other activities that I love to do!
-                            </p>
-                            <ul className="mt-6 space-y-2.5 text-white/50 inline-block text-left">
-                                {['Playing Chess', 'Watching Tech Videos', 'Travelling', 'Building my homelab'].map((item) => (
-                                    <li key={item} className="flex items-center gap-3 text-sm">
-                                        <span className="w-1 h-1 rounded-full bg-(--primary-color)" />
-                                        {item}
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
-                </RevealOnScroll>
-
-                {/* Skills */}
-                <RevealOnScroll>
-                    <div className="mb-24">
-                        <div className="text-center mb-12">
-                            <p className="font-mono text-xs text-(--text-muted) tracking-widest uppercase mb-3">Skills</p>
-                            <h2 className="section-heading text-2xl md:text-4xl font-bold tracking-tight">
-                                Professional <span className="text-gradient">Skillset</span>
-                            </h2>
-                        </div>
-                        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-5 pt-8 pb-4 skill-card-container max-w-4xl mx-auto">
-                            {skills.map((skill, index) => (
-                                <SkillCard
-                                    key={index}
-                                    index={`skill-${index}`}
-                                    icon={skill.icon}
-                                    name={skill.name}
-                                    activeTooltip={activeTooltip}
-                                    setActiveTooltip={setActiveTooltip}
-                                />
-                            ))}
-                        </div>
-                    </div>
-                </RevealOnScroll>
-
-                {/* Tools */}
-                <RevealOnScroll>
-                    <div>
-                        <div className="text-center mb-12">
-                            <p className="font-mono text-xs text-(--text-muted) tracking-widest uppercase mb-3">Toolbox</p>
-                            <h2 className="section-heading text-2xl md:text-4xl font-bold tracking-tight">
-                                <span className="text-gradient">Tools</span> I Use
-                            </h2>
-                        </div>
-                        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-5 pt-8 pb-4 skill-card-container max-w-4xl mx-auto">
-                            {tools.map((tool, index) => (
-                                <SkillCard
-                                    key={index}
-                                    index={`tool-${index}`}
-                                    icon={tool.icon}
-                                    name={tool.name}
-                                    activeTooltip={activeTooltip}
-                                    setActiveTooltip={setActiveTooltip}
-                                />
-                            ))}
-                        </div>
-                    </div>
-                </RevealOnScroll>
+                <div>
+                  <h3 className="font-mono text-xs text-(--text-muted) tracking-[0.2em] uppercase mb-5">Hobbies</h3>
+                  <div className="flex flex-wrap gap-2 cursor-pointer">
+                    {['Chess', 'Tech Videos', 'Travelling', 'Homelab'].map((hobby) => (
+                      <span key={hobby} className="px-3 py-1.5 text-sm text-(--text-dim) bg-(--bg-surface) border border-(--border-subtle) rounded-md hover:border-(--primary-color)/20 hover:text-(--primary-color)/70 transition-all duration-300">
+                        {hobby}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
-        </section>
-    )
+          </RevealOnScroll>
+
+          <RevealOnScroll delay={100}>
+            <div className="space-y-6">
+              <div className="accent-top bg-(--bg-surface) rounded-lg border border-(--border-subtle) p-8 space-y-7">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <h3 className="font-mono text-xs text-(--primary-color) tracking-[0.2em] uppercase mb-2">Current Role</h3>
+                    <p className="text-(--text-color) font-medium text-lg mb-1">Tier 2 Application Support Engineer</p>
+                    <p className="text-(--text-dim) text-sm">Symcor &middot; 2026&ndash;Present</p>
+                  </div>
+                  <span className="live-dot w-2 h-2 rounded-full bg-(--primary-color) mt-2 shrink-0" />
+                </div>
+
+                <div className="section-divider" />
+
+                <div>
+                  <h3 className="font-mono text-xs text-(--primary-color) tracking-[0.2em] uppercase mb-2">Freelance</h3>
+                  <p className="text-(--text-color) font-medium text-lg mb-1">Full-Stack Developer</p>
+                  <p className="text-(--text-dim) text-sm">Building custom solutions for clients</p>
+                </div>
+
+                <div className="section-divider" />
+
+                <div>
+                  <h3 className="font-mono text-xs text-(--primary-color) tracking-[0.2em] uppercase mb-2">Location</h3>
+                  <p className="text-(--text-color) font-medium text-lg mb-1">Canada</p>
+                  <p className="text-(--text-dim) text-sm">Open to remote opportunities worldwide</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-3 gap-3">
+                {stats.map((stat, i) => (
+                  <div
+                    key={stat.label}
+                    className="bg-(--bg-surface) border border-(--border-subtle) rounded-lg p-5 text-center hover:border-(--primary-color)/20 transition-all duration-300"
+                    style={{ animationDelay: `${(i + 1) * 100}ms` }}
+                  >
+                    <p className="font-display text-2xl md:text-3xl font-bold text-(--primary-color) leading-none mb-1.5">{stat.value}</p>
+                    <p className="font-mono text-[10px] text-(--text-muted) tracking-[0.15em] uppercase leading-tight">{stat.label}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="relative bg-(--bg-surface) border border-(--border-subtle) rounded-lg p-6 overflow-hidden">
+                <div className="absolute -top-8 -right-8 w-32 h-32 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(232,255,71,0.06) 0%, transparent 70%)' }} />
+                <div className="relative z-10 flex items-center gap-5">
+                  <div className="shrink-0 w-16 h-16 border-2 border-(--primary-color)/20 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg, rgba(232,255,71,0.08) 0%, rgba(255,107,53,0.04) 100%)' }}>
+                    <span className="font-display text-2xl font-bold text-(--primary-color)">SP</span>
+                  </div>
+                  <div>
+                    <p className="font-mono text-xs text-(--text-muted) tracking-[0.15em] uppercase mb-1">Status</p>
+                    <p className="text-sm text-(--text-color)/90 font-medium">Available for freelance & collaboration</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </RevealOnScroll>
+        </div>
+      </div>
+    </section>
+  )
 }
 
 export default About
