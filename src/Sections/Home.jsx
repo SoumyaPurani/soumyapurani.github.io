@@ -31,7 +31,7 @@ function Home({ startTyping }) {
      </h1>
 
      <div className="text-lg md:text-xl text-(--primary-color)/80 font-mono mb-8 h-8 hero-line-animate">
-      <TypingEffect text="Soumya Purani" speed={100} start={startTyping} />
+      <TypingEffect text="Hi, My name is Soumya..." speed={100} start={startTyping} />
      </div>
 
      <p className="text-(--text-dim) text-base mb-12 max-w-lg leading-[1.7] hero-line-animate">

@@ -13,8 +13,7 @@ function Education() {
       ],
       highlights: [
         { label: "Degree", value: "Bachelor's" },
-        { label: "Duration", value: "4 Years" },
-        { label: "Focus", value: "Full-Stack Development" }
+        { label: "Duration", value: "4 Years" }
       ]
     },
     {
@@ -27,8 +26,7 @@ function Education() {
       ],
       highlights: [
         { label: "Degree", value: "Diploma" },
-        { label: "Duration", value: "3 Years" },
-        { label: "Specialization", value: "Software Engineering" }
+        { label: "Duration", value: "3 Years" }
       ]
     }
   ];
@@ -87,11 +85,16 @@ function Education() {
                 
 
                 {/* Highlights */}
-                <div className="grid grid-cols-3 gap-3 mb-6">
+                <div className="grid grid-cols-2 gap-3 mb-6">
                   {edu.highlights.map((highlight, i) => (
-                    <div key={i} className="text-center p-3 border border-(--border-subtle) rounded-md bg-(--bg-surface)/30">
-                      <p className="text-xs font-mono text-(--text-muted) uppercase tracking-wider mb-1">{highlight.label}</p>
-                      <p className="text-sm font-medium text-(--text-color)">{highlight.value}</p>
+                    <div
+                      key={i}
+                      className={`p-4 rounded-md bg-(--bg-surface)/30 border border-(--border-subtle) flex flex-col gap-1 ${
+                        i === 0 ? 'border-l-2 border-l-(--primary-color)/50' : ''
+                      }`}
+                    >
+                      <p className="text-xs font-mono text-(--text-muted) uppercase tracking-wider">{highlight.label}</p>
+                      <p className="text-base font-bold text-(--text-color) leading-tight">{highlight.value}</p>
                     </div>
                   ))}
                 </div>

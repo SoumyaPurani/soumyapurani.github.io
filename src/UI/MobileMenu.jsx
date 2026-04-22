@@ -10,7 +10,7 @@ const menuItems = [
 
 function MobileMenu({ isMenuOpen, setIsMenuOpen }) {
  return (
-  <div className={`fixed inset-0 bg-[var(--bg-color)]/95 backdrop-blur-xl z-60 flex flex-col items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+  <div className={`fixed inset-0 bg-(--bg-color)/95 backdrop-blur-xl z-60 flex flex-col items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
    <button
     onClick={() => setIsMenuOpen(false)}
     className="absolute top-5 right-6 text-2xl cursor-pointer text-white/50 hover:text-white transition-colors duration-300"
@@ -32,7 +32,7 @@ function MobileMenu({ isMenuOpen, setIsMenuOpen }) {
        transform: isMenuOpen ? 'translateY(0)' : 'translateY(16px)',
       }}
      >
-      <span className="text-2xl font-display font-semibold text-white/80 group-hover:text-[var(--primary-color)] transition-colors">
+      <span className="text-2xl font-display font-semibold text-white/80 group-hover:text-(--primary-color) transition-colors">
        {label}
       </span>
      </a>

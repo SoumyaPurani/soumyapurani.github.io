@@ -8,12 +8,12 @@ function Footer() {
    <div className="container mx-auto px-6 lg:px-12">
     <div className="flex flex-col md:flex-row justify-between items-center gap-8">
      <div className="flex flex-col items-center md:items-start gap-3">
-      <a href="#home" className="font-display text-lg font-bold tracking-tight text-[var(--text-color)] hover:text-[var(--primary-color)] transition-colors">
+      <a href="#home" className="font-display text-lg font-bold tracking-tight text-(--text-color) hover:text-(--primary-color) transition-colors">
        Soumya<span className="text-gradient ml-1">Purani</span>
       </a>
       <a
        href="mailto:soumyapurani@gmail.com"
-       className="font-mono text-xs text-[var(--text-muted)] hover:text-[var(--primary-color)] transition-colors"
+       className="font-mono text-xs text-(--text-muted) hover:text-(--primary-color) transition-colors"
       >
        soumyapurani@gmail.com
       </a>
@@ -22,7 +22,7 @@ function Footer() {
      <div className="flex items-center gap-6">
       <a
        href="https://www.linkedin.com/in/soumyapurani/"
-       className="text-[var(--text-muted)] hover:text-[var(--primary-color)] transition-all duration-300 text-lg"
+       className="text-(--text-muted) hover:text-(--primary-color) transition-all duration-300 text-lg"
        target="_blank"
        rel="noopener noreferrer"
        aria-label="LinkedIn"
@@ -31,7 +31,7 @@ function Footer() {
       </a>
       <a
        href="https://github.com/SoumyaPurani"
-       className="text-[var(--text-muted)] hover:text-[var(--primary-color)] transition-all duration-300 text-lg"
+       className="text-(--text-muted) hover:text-(--primary-color) transition-all duration-300 text-lg"
        target="_blank"
        rel="noopener noreferrer"
        aria-label="GitHub"
@@ -40,7 +40,7 @@ function Footer() {
       </a>
       <a
        href="#home"
-       className="text-[var(--text-muted)] hover:text-[var(--primary-color)] transition-all duration-300 text-lg border border-[var(--border-subtle)] p-2 hover:border-[var(--primary-color)]/30"
+       className="text-(--text-muted) hover:text-(--primary-color) transition-all duration-300 text-lg border border-(--border-subtle) p-2 hover:border-(--primary-color)/30"
        aria-label="Back to top"
       >
        <FiArrowUp className="text-sm" />
@@ -49,7 +49,7 @@ function Footer() {
     </div>
 
     <div className="section-divider mt-10 mb-6" />
-    <p className="text-center text-xs text-[var(--text-muted)] font-mono tracking-wider">
+    <p className="text-center text-xs text-(--text-muted) font-mono tracking-wider">
      &copy; {new Date().getFullYear()} Soumya Purani
     </p>
    </div>

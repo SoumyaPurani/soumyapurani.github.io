@@ -55,16 +55,21 @@ function Navbar({ isMenuOpen, setIsMenuOpen }) {
         <a
          key={href}
          href={href}
-         className={`relative px-3.5 py-2 text-sm font-medium transition-all duration-300 font-mono tracking-wide ${
+         className={`group relative px-3.5 py-2 text-sm font-medium font-mono tracking-wide transition-colors duration-300 ${
           isActive
-           ? 'text-[var(--primary-color)]'
-           : 'text-[var(--text-muted)] hover:text-[var(--text-color)]'
+           ? 'text-(--primary-color)'
+           : 'text-(--text-muted) hover:text-(--primary-color)'
          }`}
         >
          {label}
-         {isActive && (
-          <span className="absolute bottom-0 left-0 w-full h-[1px] bg-[var(--primary-color)]" />
-         )}
+         <span
+          className={`absolute bottom-0 left-0 h-[1.5px] w-full bg-(--primary-color) transition-transform duration-300 ease-out ${
+           isActive 
+            ? 'origin-left scale-x-100' 
+            : 'origin-right scale-x-0 group-hover:origin-left group-hover:scale-x-100'
+          }`}
+          aria-hidden="true"
+         />
         </a>
        );
       })}

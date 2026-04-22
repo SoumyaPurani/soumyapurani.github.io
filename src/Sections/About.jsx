@@ -30,7 +30,7 @@ function About() {
             <div className="space-y-8">
               <div className="space-y-6">
                 <p className="text-(--text-dim) text-base leading-[1.8]">
-                  Hi, I'm <span className="text-(--text-color) font-medium">Soumya Purani</span> — currently based in Canada.
+                  Hi, I'm <span className="text-(--text-color) font-medium">Soumya Purani</span>, currently based in Canada.
                   I'm a Tier 2 Application Support Engineer at Symcor, a freelance developer,
                   and a Computer Science graduate from Dalhousie University.
                 </p>
