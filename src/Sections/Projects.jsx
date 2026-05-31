@@ -9,8 +9,17 @@ import { BsGithub } from "react-icons/bs";
 import { FiExternalLink, FiArrowUpRight } from "react-icons/fi";
 import InProgress from '../assets/InProgress.jpg'
 import StretchandSmile from '../assets/StretchandSmile.png'
+import truenastui from '../assets/truenastui.png'
 
 const allProjects = [
+ {
+  Image: truenastui,
+  title: "TrueNAS TUI",
+  description: "A blazing fast, real-time Terminal UI for TrueNAS SCALE 25.04+ built with Textual and JSON-RPC 2.0 WebSockets.",
+  technologies: ["Python", "Textual", "JSON-RPC 2.0 WebSockets", "Git", "Docker", "TOML"],
+  ghLink: "https://github.com/SoumyaPurani/TrueNASScale-TUI",
+  category: "personal",
+ },
  {
   Image: dalChessClub,
   title: "Dalhousie Chess Club",
@@ -90,12 +99,12 @@ function Projects() {
     <RevealOnScroll>
      <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12 gap-6">
       <div>
-       <p className="font-mono text-xs text-[var(--text-muted)] tracking-[0.2em] uppercase mb-3">Portfolio</p>
+       <p className="font-mono text-xs text-(--text-muted) tracking-[0.2em] uppercase mb-3">Portfolio</p>
        <h2 className="section-heading text-3xl md:text-5xl font-bold tracking-tight">
         Selected <span className="text-gradient">Work</span>
        </h2>
       </div>
-      <div className="flex gap-0 border border-[var(--border-subtle)]">
+      <div className="flex gap-0 border border-(--border-subtle)">
        {filters.map(f => (
         <button
          key={f.key}
@@ -112,9 +121,9 @@ function Projects() {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
      {filtered.map((project, index) => (
       <RevealOnScroll key={project.title} delay={index * 60}>
-       <div className="group bg-[var(--bg-surface)] accent-top h-full flex flex-col transition-all duration-500 hover:-translate-y-0.5">
+       <div className="group bg-(--bg-surface) accent-top h-full flex flex-col transition-all duration-500 hover:-translate-y-0.5">
         <div className="relative overflow-hidden">
-         <div className="aspect-[3/2]">
+         <div className="aspect-3/2">
           <img
            src={project.Image}
            alt={project.title}
@@ -122,18 +131,18 @@ function Projects() {
           />
          </div>
          {project.liveLink && (
-          <div className="absolute top-3 right-3 flex items-center gap-1.5 bg-[var(--bg-color)]/90 px-2.5 py-1 border border-[var(--border-subtle)]">
+          <div className="absolute top-3 right-3 flex items-center gap-1.5 bg-(--bg-color)/90 px-2.5 py-1 border border-(--border-subtle)">
            <span className="w-1.5 h-1.5 rounded-full bg-[#28c840] live-dot" />
            <span className="font-mono text-[10px] text-[#28c840] font-medium tracking-wider">LIVE</span>
           </div>
          )}
         </div>
 
-        <div className="p-5 flex flex-col flex-grow">
-         <h3 className="text-base font-bold mb-2 tracking-tight text-[var(--text-color)]/90 group-hover:text-[var(--primary-color)] transition-colors">
+        <div className="p-5 flex flex-col grow">
+         <h3 className="text-base font-bold mb-2 tracking-tight text-(--text-color)/90 group-hover:text-(--primary-color) transition-colors">
           {project.title}
          </h3>
-         <p className="text-[var(--text-dim)] mb-5 text-sm leading-[1.7] flex-grow min-h-[3rem]">
+         <p className="text-(--text-dim) mb-5 text-sm leading-[1.7] grow min-h-12">
           {project.description}
          </p>
 
@@ -143,16 +152,16 @@ function Projects() {
           ))}
          </div>
 
-         <div className="mt-auto pt-3 border-t border-[var(--border-subtle)]">
+         <div className="mt-auto pt-3 border-t border-(--border-subtle)">
           {project.ghLink && (
-           <a href={project.ghLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-[var(--text-muted)] hover:text-[var(--primary-color)] transition-all duration-300 group/link">
+           <a href={project.ghLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-(--text-muted) hover:text-(--primary-color) transition-all duration-300 group/link">
             <BsGithub className="text-sm" />
             <span className="text-xs font-medium font-mono">Source</span>
             <FiArrowUpRight className="text-xs opacity-0 group-hover/link:opacity-100 transition-opacity duration-300" />
            </a>
           )}
           {project.liveLink && (
-           <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-[var(--text-muted)] hover:text-[var(--primary-color)] transition-all duration-300 group/link">
+           <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-(--text-muted) hover:text-(--primary-color) transition-all duration-300 group/link">
             <FiExternalLink className="text-sm" />
             <span className="text-xs font-medium font-mono">Visit</span>
             <FiArrowUpRight className="text-xs opacity-0 group-hover/link:opacity-100 transition-opacity duration-300" />
