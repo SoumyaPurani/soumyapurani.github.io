@@ -11,6 +11,8 @@ import InProgress from '../assets/InProgress.jpg'
 import StretchandSmile from '../assets/StretchandSmile.png'
 import truenastui from '../assets/truenastui.png'
 
+import resumeModifierImg from '../assets/resume-modifier.png'
+
 const allProjects = [
  {
   Image: truenastui,
@@ -18,6 +20,14 @@ const allProjects = [
   description: "A blazing fast, real-time Terminal UI for TrueNAS SCALE 25.04+ built with Textual and JSON-RPC 2.0 WebSockets.",
   technologies: ["Python", "Textual", "JSON-RPC 2.0 WebSockets", "Git", "Docker", "TOML"],
   ghLink: "https://github.com/SoumyaPurani/TrueNASScale-TUI",
+  category: "personal",
+ },
+ {
+  Image: resumeModifierImg,
+  title: "Resume Modifier",
+  description: "An AI-powered resume tailoring tool. Upload a master experience repo, paste a job description, and get a tailored one-page PDF in seconds.",
+  technologies: ["React 19", "Vite 8", "Tailwind CSS v4", "Node.js", "Express 5", "NVIDIA NIM / OpenAI / Anthropic"],
+  ghLink: "https://github.com/SoumyaPurani/Resume_modifier",
   category: "personal",
  },
  {
